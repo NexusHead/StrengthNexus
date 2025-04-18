@@ -2,142 +2,378 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StrengthMind</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="StrengthMind - Where Purpose Meets Power. Your personal fortress of strength, knowledge, and evolution." />
+  <title>StrengthMind | Where Purpose Meets Power</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: crimson;
+      --dark-bg: #0a0a0a;
+      --section-bg: #111;
+      --text-light: #ddd;
+      --text-muted: #aaa;
+      --nav-bg: #1a1a1a;
+      --border-radius-sm: 8px;
+      --border-radius-md: 12px;
+      --transition-speed: 0.3s;
+      --container-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       margin: 0;
+      background-color: var(--dark-bg);
+      color: white;
       font-family: 'Bebas Neue', sans-serif;
-      background-color: #0a0a0a;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    a:hover {
       color: white;
     }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
     header {
       text-align: center;
-      padding: 4rem 1rem 1rem;
+      padding: 5rem 1rem 2rem;
+      position: relative;
+      overflow: hidden;
     }
-    h1 {
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 4rem;
-      color: white;
+      font-weight: 700;
+      line-height: 1.2;
     }
-    h1 span.red {
-      color: crimson;
+
+    h1 {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+      margin: 0;
+      letter-spacing: 1px;
     }
-    .description {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      color: #bbb;
+
+    .title span:first-child {
+      color: black;
+      background-color: var(--primary-color);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--border-radius-sm);
+      display: inline-block;
     }
+
+    .title span:last-child {
+      color: var(--primary-color);
+    }
+
+    .tagline {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      color: var(--text-muted);
+      margin-top: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
     nav {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    nav a {
-      border: 2px solid crimson;
-      padding: 0.8rem 1.5rem;
-      color: crimson;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-family: 'Montserrat', sans-serif;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: crimson;
-      color: white;
-    }
-    .section-group {
-      display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
-      margin: 3rem 1rem 1rem;
-    }
-    .section {
-      border: 2px solid crimson;
-      padding: 1.5rem;
-      max-width: 300px;
-      flex: 1;
-      text-align: center;
-      font-size: 1rem;
-    }
-    .section-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      color: crimson;
-      margin-bottom: 1rem;
-    }
-    .bottom-section {
+      margin: 3rem auto 2rem;
       max-width: 900px;
-      margin: 4rem auto;
-      padding: 2rem;
+      gap: 1rem;
+    }
+
+    .nav-link {
+      background-color: var(--nav-bg);
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      border-radius: var(--border-radius-md);
+      font-size: 1.2rem;
+      transition: all var(--transition-speed);
       text-align: center;
+      flex: 1 1 calc(33.333% - 1rem);
+      min-width: 160px;
+      position: relative;
+      overflow: hidden;
     }
-    .bottom-section h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: crimson;
-      font-size: 2rem;
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: var(--primary-color);
+      transition: height var(--transition-speed);
+      z-index: 0;
+    }
+
+    .nav-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(220, 20, 60, 0.3);
+    }
+
+    .nav-link:hover::after {
+      height: 4px;
+    }
+
+    .nav-link span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-container {
+      max-width: var(--container-width);
+      margin: 5rem auto;
+      padding: 1rem;
+    }
+
+    .section {
+      background-color: var(--section-bg);
+      border-left: 6px solid var(--primary-color);
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      border-radius: var(--border-radius-md);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform var(--transition-speed);
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h2 {
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
       margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
     }
-    .bottom-section p {
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+
+    .section p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
       font-size: 1.1rem;
-      color: #ddd;
-      margin-bottom: 2rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .emphasis {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      background-color: var(--section-bg);
+      border-top: 1px solid rgba(220, 20, 60, 0.2);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .social-link {
+      color: var(--text-light);
+      font-size: 1.5rem;
+      transition: color var(--transition-speed);
+    }
+
+    .social-link:hover {
+      color: var(--primary-color);
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: var(--border-radius-sm);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all var(--transition-speed);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cta-button:hover {
+      background-color: #a51329;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
+    }
+
+    /* Hero section enhancement */
+    .hero {
+      position: relative;
+      margin-bottom: 4rem;
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      margin: 3rem auto 0;
+      max-width: 800px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius-md);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      nav {
+        gap: 0.8rem;
+      }
+      
+      .nav-link {
+        flex: 1 1 calc(50% - 0.8rem);
+        padding: 0.8rem 1rem;
+        font-size: 1.1rem;
+      }
+      
+      .section {
+        padding: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-link {
+        flex: 1 1 100%;
+      }
+      
+      .section {
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 3rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1><span class="black">Strength</span><span class="red">Mind</span></h1>
-    <p class="description">Where purpose meets progression.</p>
+    <div class="container">
+      <h1 class="title"><span>Strength</span><span>Mind</span></h1>
+      <div class="tagline">Where Purpose Meets Power</div>
+    </div>
   </header>
 
-  <nav>
-    <a href="bodyweight.html">Bodyweight</a>
-    <a href="hypertrophy.html">Hypertrophy</a>
-    <a href="endurance.html">Endurance</a>
-    <a href="athleticism.html">Athleticism</a>
-    <a href="coach.html">AI Coach</a>
+  <nav class="container">
+    <a class="nav-link" href="bodyweight.html"><span>Bodyweight Mastery</span></a>
+    <a class="nav-link" href="hypertrophy.html"><span>Hypertrophy</span></a>
+    <a class="nav-link" href="endurance.html"><span>Endurance</span></a>
+    <a class="nav-link" href="athleticism.html"><span>Athleticism</span></a>
+    <a class="nav-link" href="ai-coach.html"><span>AI Coach</span></a>
   </nav>
 
-  <section class="section-group">
-    <div class="section">
-      <h3 class="section-title">Bodyweight Mastery</h3>
-      <p>Train anytime, anywhere. Master your body through structured calisthenics and progressive strength techniques.</p>
-    </div>
-    <div class="section">
-      <h3 class="section-title">Hypertrophy</h3>
-      <p>Stimulate growth and build aesthetic muscle with science-backed intensity techniques and structured routines.</p>
-    </div>
-    <div class="section">
-      <h3 class="section-title">Endurance</h3>
-      <p>Push beyond limits. Condition your lungs, heart, and mind for peak performance and stamina in any domain.</p>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-image">
+        <img src="/api/placeholder/800/400" alt="Athlete in training - StrengthMind philosophy in action">
+      </div>
     </div>
   </section>
 
-  <section class="section-group">
+  <div class="section-container container">
     <div class="section">
-      <h3 class="section-title">Athleticism</h3>
-      <p>Run faster. Jump higher. Move smarter. Train to be explosive, mobile, and dominant across all sports.</p>
+      <h2>What is StrengthMind?</h2>
+      <p>StrengthMind is your personal fortress of strength, knowledge, and evolution. Whether you want to gain muscle, burn fat, or build total athleticism — StrengthMind makes the process <span class="emphasis">accessible and powerful</span> for anyone, anywhere. We believe in training both the body and mind to achieve lasting transformation.</p>
+      <a href="about.html" class="cta-button">Learn More</a>
     </div>
+
     <div class="section">
-      <h3 class="section-title">AI Coach</h3>
-      <p>Get custom guidance, programs, and feedback tailored to your goals with StrengthMind’s AI coaching engine.</p>
+      <h2>Why StrengthMind Exists</h2>
+      <p>StrengthMind aims to give anyone willing to change the center of everything they need. Whether it's gaining muscle, getting better at a sport, or losing weight — it's all found here. <span class="emphasis">No gimmicks, no confusion.</span> Just transformation. We've distilled complex fitness principles into actionable, straightforward guidance that delivers results.</p>
     </div>
-  </section>
 
-  <section class="bottom-section">
-    <h2>Why StrengthMind Exists</h2>
-    <p>StrengthMind aims to get any and everyone willing to change the center of everything they need. Be it gaining muscle, improving in a sport, or losing weight — it’s all found here.</p>
+    <div class="section">
+      <h2>End Goal</h2>
+      <p>To be proud of what you've become. Not for anyone else — but for yourself. StrengthMind's path is forged by <span class="emphasis">sweat, focus, and relentless improvement.</span> We believe true strength comes from within and manifests in both physical capability and mental fortitude. Join us on this journey of self-improvement.</p>
+    </div>
 
-    <h2>Founder's Statement</h2>
-    <p>I got tired of seeing people overcomplicate fitness — turning gyms into science fairs or exclusive cliques. I created StrengthMind to welcome those who want to transform. I’m not perfect either — I’m walking this path too. The mission is to build a truly strong community of people striving to become their best selves.</p>
+    <div class="section">
+      <h2>Founder's Statement</h2>
+      <p>"I got tired of seeing people overcomplicate fitness — turning it into a science fair or a closed-off community. I made StrengthMind with the purpose of inviting people who want to change and helping them achieve their goals. I'm not perfect either. I'm also walking this path. The mission of StrengthMind is to create a truly strong community of people who strive to be their best selves."</p>
+      <a href="start.html" class="cta-button">Start Your Journey</a>
+    </div>
+  </div>
 
-    <h2>End Goal</h2>
-    <p>To be proud of what you've become.</p>
-  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="social-links">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">YouTube</a>
+          <a href="#" class="social-link">Twitter</a>
+        </div>
+        <div class="copyright">
+          &copy; <script>document.write(new Date().getFullYear())</script> StrengthMind. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

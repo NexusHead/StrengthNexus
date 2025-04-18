@@ -1,173 +1,143 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StrengthMind | Bodyweight Mastery</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StrengthMind</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Bebas Neue', cursive;
-      background-color: #0e0e0e;
+      font-family: 'Bebas Neue', sans-serif;
+      background-color: #0a0a0a;
       color: white;
-    }header {
-  text-align: center;
-  padding: 3rem 1rem 1rem;
-}
-
-header h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  color: crimson;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-nav a {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid crimson;
-  color: crimson;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  font-size: 1.1rem;
-}
-
-nav a:hover {
-  background-color: crimson;
-  color: black;
-}
-
-section {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 1rem;
-  border: 2px solid crimson;
-  border-radius: 12px;
-}
-
-section h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: crimson;
-}
-
-details {
-  margin-bottom: 1.5rem;
-}
-
-summary {
-  font-size: 1.3rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-ul {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-.programs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.program {
-  flex: 1 1 calc(33% - 1rem);
-  background-color: #1a1a1a;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid crimson;
-}
-
-.program h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.program p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.program a {
-  color: crimson;
-  text-decoration: underline;
-}
-
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem 1rem;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4rem;
+      color: white;
+    }
+    h1 span.red {
+      color: crimson;
+    }
+    .description {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #bbb;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    nav a {
+      border: 2px solid crimson;
+      padding: 0.8rem 1.5rem;
+      color: crimson;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-family: 'Montserrat', sans-serif;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: crimson;
+      color: white;
+    }
+    .section-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem 1rem 1rem;
+    }
+    .section {
+      border: 2px solid crimson;
+      padding: 1.5rem;
+      max-width: 300px;
+      flex: 1;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      color: crimson;
+      margin-bottom: 1rem;
+    }
+    .bottom-section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    .bottom-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: crimson;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .bottom-section p {
+      font-size: 1.1rem;
+      color: #ddd;
+      margin-bottom: 2rem;
+    }
   </style>
-</head><body>
+</head>
+<body>
   <header>
-    <h1>Bodyweight Mastery</h1>
-    <p>"Where You Can Get Strong Anywhere and Anytime"</p>
-  </header>  <nav>
-    <a href="#vertical-pull">Vertical Pull</a>
-    <a href="#horizontal-pull">Horizontal Pull</a>
-    <a href="#vertical-push">Vertical Push</a>
-    <a href="#horizontal-push">Horizontal Push</a>
-    <a href="#core">Core</a>
-    <a href="#statics">Statics</a>
-    <a href="#programs">Starter Programs</a>
-    <a href="#gear">Recommended Gear</a>
-  </nav>  <main>
-    <section id="vertical-pull">
-      <h2>Vertical Pull Progression</h2>
-      <details>
-        <summary>View Progression</summary>
-        <ul>
-          <li>1. Dead Hangs – Hang from a bar to build grip strength.</li>
-          <li>2. Scapular Pulls – Activate your lats by retracting your scapula while hanging.</li>
-          <li>3. Assisted Pull-Ups – Use bands or a chair to perform pull-ups.</li>
-          <li>4. Negative Pull-Ups – Jump up and slowly lower yourself.</li>
-          <li>5. Chin-Ups – Underhand grip to engage biceps more.</li>
-          <li>6. Pull-Ups – Standard shoulder-width overhand grip.</li>
-          <li>7. Wide Pull-Ups – Increase lat emphasis and difficulty.</li>
-          <li>8. L-Sit Pull-Ups – Add core activation to your pull-ups.</li>
-          <li>9. Archer Pull-Ups – One side works harder, builds unilateral strength.</li>
-          <li>10. One Arm Pull-Ups – Elite level bodyweight mastery.</li>
-        </ul>
-      </details>
-    </section><!-- Add horizontal pull, push, core, statics in similar format below -->
+    <h1><span class="black">Strength</span><span class="red">Mind</span></h1>
+    <p class="description">Where purpose meets progression.</p>
+  </header>
 
-<section id="programs">
-  <h2>Starter Programs (PDF)</h2>
-  <div class="programs">
-    <div class="program">
-      <h3>3 Day Beginner</h3>
-      <p>Simple entry-level plan focused on full body movement patterns.</p>
-      <a href="pdfs/3day-beginner.pdf" download>Download PDF</a>
+  <nav>
+    <a href="bodyweight.html">Bodyweight</a>
+    <a href="hypertrophy.html">Hypertrophy</a>
+    <a href="endurance.html">Endurance</a>
+    <a href="athleticism.html">Athleticism</a>
+    <a href="coach.html">AI Coach</a>
+  </nav>
+
+  <section class="section-group">
+    <div class="section">
+      <h3 class="section-title">Bodyweight Mastery</h3>
+      <p>Train anytime, anywhere. Master your body through structured calisthenics and progressive strength techniques.</p>
     </div>
-    <div class="program">
-      <h3>4 Day Foundation Builder</h3>
-      <p>Split plan building strength and volume with minimal gear.</p>
-      <a href="pdfs/4day-foundation.pdf" download>Download PDF</a>
+    <div class="section">
+      <h3 class="section-title">Hypertrophy</h3>
+      <p>Stimulate growth and build aesthetic muscle with science-backed intensity techniques and structured routines.</p>
     </div>
-    <!-- Add 8 more structured program blocks similarly -->
-  </div>
-</section>
+    <div class="section">
+      <h3 class="section-title">Endurance</h3>
+      <p>Push beyond limits. Condition your lungs, heart, and mind for peak performance and stamina in any domain.</p>
+    </div>
+  </section>
 
-<section id="gear">
-  <h2>Recommended Gear</h2>
-  <p>Start with the essentials: pull-up bar, dip station, resistance bands, gymnastic rings. These tools expand your exercise library and make progression scalable at home.</p>
-</section>
+  <section class="section-group">
+    <div class="section">
+      <h3 class="section-title">Athleticism</h3>
+      <p>Run faster. Jump higher. Move smarter. Train to be explosive, mobile, and dominant across all sports.</p>
+    </div>
+    <div class="section">
+      <h3 class="section-title">AI Coach</h3>
+      <p>Get custom guidance, programs, and feedback tailored to your goals with StrengthMind’s AI coaching engine.</p>
+    </div>
+  </section>
 
-  </main>
-</body></html>
+  <section class="bottom-section">
+    <h2>Why StrengthMind Exists</h2>
+    <p>StrengthMind aims to get any and everyone willing to change the center of everything they need. Be it gaining muscle, improving in a sport, or losing weight — it’s all found here.</p>
+
+    <h2>Motivation</h2>
+    <p>I got tired of seeing people overcomplicate fitness — turning gyms into science fairs or exclusive cliques. I created StrengthMind to welcome those who want to transform. I’m not perfect either — I’m walking this path too. The mission is to build a truly strong community of people striving to become their best selves.</p>
+
+    <h2>End Goal</h2>
+    <p>To be proud of what you've become.</p>
+  </section>
+</body>
+</html>

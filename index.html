@@ -1,137 +1,128 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StrengthMind</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      font-family: 'Bebas Neue', sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: 'Bebas Neue', sans-serif;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background-color: #000;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4rem;
       margin: 0;
-      padding: 0;
-    }header {
-  text-align: center;
-  padding: 80px 20px 20px;
-}
-
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 64px;
-  margin: 0;
-}
-
-.highlight {
-  color: crimson;
-}
-
-.description {
-  font-size: 24px;
-  margin-top: 10px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-  gap: 20px;
-}
-
-.nav-group {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav a {
-  text-decoration: none;
-  color: crimson;
-  border: 2px solid crimson;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-nav a:hover {
-  background-color: crimson;
-  color: black;
-}
-
-.section {
-  border: 2px solid crimson;
-  margin: 50px auto;
-  max-width: 900px;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: #111;
-}
-
-.section h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.section p {
-  font-size: 20px;
-}
-
-.footer-section {
-  max-width: 900px;
-  margin: 80px auto 40px;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.footer-section h2 {
-  font-size: 32px;
-  font-family: 'Montserrat', sans-serif;
-  color: crimson;
-}
-
-.footer-section p {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
+    }
+    .red {
+      color: crimson;
+    }
+    .description {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    .nav-link {
+      padding: 10px 20px;
+      border: 2px solid crimson;
+      color: crimson;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+      background-color: crimson;
+      color: #000;
+    }
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-card {
+      background-color: #111;
+      border: 2px solid crimson;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .section-card h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .section-card p {
+      font-size: 1rem;
+    }
+    footer {
+      background-color: #111;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 1rem;
+      border-top: 1px solid crimson;
+      color: #ccc;
+    }
   </style>
-</head><body>
+</head>
+<body>
   <header>
-    <h1><span>Strength</span><span class="highlight">Mind</span></h1>
-    <p class="description">A bold system for mastering your body, strength, endurance, and athleticism—guided by precision, not guesswork.</p>
+    <h1><span style="color: white">Strength</span><span class="red">Mind</span></h1>
+    <p class="description">
+      Welcome to StrengthMind – your elite hub for developing the ultimate human body and mind. Master your physical potential across five disciplines: Bodyweight Mastery, Hypertrophy, Endurance, Athleticism, and AI Coaching.
+    </p>
   </header>  <nav>
-    <div class="nav-group">
-      <a href="bodyweight.html">Bodyweight Mastery</a>
-      <a href="hypertrophy.html">Hypertrophy</a>
-      <a href="endurance.html">Endurance</a>
+    <a class="nav-link" href="#bodyweight">Bodyweight Mastery</a>
+    <a class="nav-link" href="#hypertrophy">Hypertrophy</a>
+    <a class="nav-link" href="#endurance">Endurance</a>
+  </nav>
+  <nav>
+    <a class="nav-link" href="#athleticism">Athleticism</a>
+    <a class="nav-link" href="#ai">AI Coach</a>
+  </nav>  <div class="section-grid">
+    <div class="section-card" id="bodyweight">
+      <h2>Bodyweight Mastery</h2>
+      <p>Learn full progressions from basic to elite calisthenics—pushups to planche, pullups to front lever. Control your body like a true warrior.</p>
     </div>
-    <div class="nav-group">
-      <a href="athleticism.html">Athleticism</a>
-      <a href="ai-coach.html">AI Coach</a>
+    <div class="section-card" id="hypertrophy">
+      <h2>Hypertrophy</h2>
+      <p>Discover the science and strategy behind true muscle growth. RPE, volume, time under tension, and exact progression methods included.</p>
     </div>
-  </nav>  <div class="section">
-    <h2>Bodyweight Mastery</h2>
-    <p>Master your body through progressive calisthenics, skill work, and statics. This path builds control, awareness, and functional strength without equipment.</p>
-  </div>  <div class="section">
-    <h2>Hypertrophy</h2>
-    <p>Grow powerful, aesthetic muscle with a scientific approach—balancing volume, tension, and recovery for optimal growth and performance.</p>
-  </div>  <div class="section">
-    <h2>Endurance</h2>
-    <p>Develop lasting physical and mental stamina. Push through barriers with intelligent training that balances intensity and recovery.</p>
-  </div>  <div class="section">
-    <h2>Athleticism</h2>
-    <p>Explode with power, agility, coordination, and grace. Built from the ground up for total body control and elite movement capacity.</p>
-  </div>  <div class="section">
-    <h2>AI Coach</h2>
-    <p>A custom intelligent coach that builds dynamic training plans just for you—evolving with your goals, data, and progress.</p>
-  </div>  <div class="footer-section">
-    <h2>What is StrengthMind?</h2>
-    <p>StrengthMind is a modern performance system forged from discipline, science, and mastery. We don't follow trends—we create elite training blueprints. Each pathway is built to transform your body and mind to their highest form, guided by smart principles and relentless execution.</p>
-  </div>
-</body></html>
+    <div class="section-card" id="endurance">
+      <h2>Endurance</h2>
+      <p>Build mental and physical stamina. From steady state to HIIT, understand energy systems and train to outlast the competition.</p>
+    </div>
+    <div class="section-card" id="athleticism">
+      <h2>Athleticism</h2>
+      <p>Become powerful, fast, and explosive. Train coordination, mobility, and functional movement for peak performance in life and sport.</p>
+    </div>
+    <div class="section-card" id="ai">
+      <h2>AI Coach</h2>
+      <p>Your personalized training brain. Get adaptive workouts, form breakdowns, and elite guidance built from your goals and stats.</p>
+    </div>
+  </div>  <footer>
+    <p>
+      StrengthMind is more than training. It's a mindset. We help you master your body through logic, precision, and passion. Every system here is battle-tested for true performance, transformation, and dominance. Welcome to your next level.
+    </p>
+  </footer>
+</body>
+</html>

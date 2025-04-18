@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>StrengthMind</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -12,78 +12,91 @@
       color: #fff;
       font-family: 'Bebas Neue', sans-serif;
     }
+
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: 80px 20px 40px 20px;
     }
+
     .title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 60px;
+      font-size: 80px;
       font-weight: bold;
     }
+
     .title span:first-child {
       color: white;
     }
+
     .title span:last-child {
       color: crimson;
     }
+
+    .description {
+      font-size: 24px;
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
     nav {
       display: flex;
-      justify-content: space-between;
-      padding: 20px 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 0 10px;
       background-color: #111;
-      font-size: 20px;
-      border-bottom: 2px solid crimson;
     }
-    nav a {
+
+    .nav-section {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background-color: #111;
+      padding-bottom: 20px;
+    }
+
+    nav a, .nav-section a {
       color: crimson;
       text-decoration: none;
       border: 2px solid crimson;
-      padding: 10px 20px;
-      transition: 0.3s;
+      padding: 12px 24px;
+      font-size: 20px;
       font-weight: bold;
-      border-radius: 5px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
     }
-    nav a:hover {
-      color: white;
+
+    nav a:hover, .nav-section a:hover {
       background-color: crimson;
+      color: black;
     }
+
     .section {
       border: 2px solid crimson;
       margin: 40px auto;
-      max-width: 900px;
+      max-width: 1000px;
       padding: 30px;
       border-radius: 12px;
       background-color: #111;
     }
+
     .section h2 {
       color: crimson;
       font-size: 36px;
+      font-family: 'Montserrat', sans-serif;
       margin-bottom: 10px;
     }
+
     .section p {
       font-size: 20px;
       line-height: 1.6;
-    }
-    .footer-nav {
-      display: flex;
-      justify-content: space-around;
-      padding: 20px 0;
-      background-color: #111;
-      font-size: 20px;
-      border-top: 2px solid crimson;
-    }
-    .footer-nav a {
-      color: crimson;
-      text-decoration: none;
-      border: 2px solid crimson;
-      padding: 10px 20px;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    .footer-nav a:hover {
-      color: white;
-      background-color: crimson;
     }
   </style>
 </head>
@@ -92,45 +105,48 @@
     <div class="title">
       <span>Strength</span><span>Mind</span>
     </div>
-    <p style="font-size: 22px; max-width: 700px; margin: auto;">
-      StrengthMind is your ultimate guide to mastering your body and mind through science-based training in calisthenics, muscle growth, endurance, athletic performance, and AI-assisted coaching.
+    <p class="description">
+      StrengthMind is the elite system of physical and mental evolution. We guide you through structured training disciplines: bodyweight mastery, muscle hypertrophy, raw endurance, explosive athleticism, and smart AI coaching. Everything is tailored for strength, strategy, and self-mastery.
     </p>
   </header>
 
+  <!-- Top nav: Main disciplines -->
   <nav>
     <a href="#bodyweight">Bodyweight Mastery</a>
     <a href="#hypertrophy">Hypertrophy</a>
     <a href="#endurance">Endurance</a>
   </nav>
 
-  <section id="bodyweight" class="section">
-    <h2>Bodyweight Mastery</h2>
-    <p>Progress from basic push-ups to elite-level planches and muscle-ups. Each step builds strength, skill, and control using your body as the weight.</p>
-  </section>
-
-  <section id="hypertrophy" class="section">
-    <h2>Hypertrophy</h2>
-    <p>Unlock muscle growth using scientifically backed principles like RPE, volume, progressive overload, and recovery to build a powerful physique.</p>
-  </section>
-
-  <section id="endurance" class="section">
-    <h2>Endurance</h2>
-    <p>Master energy systems, aerobic capacity, and lactate threshold to push your limits longer and harder with structured endurance progression.</p>
-  </section>
-
-  <div class="footer-nav">
+  <!-- Bottom nav: Tools and support -->
+  <div class="nav-section">
     <a href="#athleticism">Athleticism</a>
     <a href="#coach">AI Coach</a>
   </div>
 
+  <!-- Section Previews -->
+  <section id="bodyweight" class="section">
+    <h2>Bodyweight Mastery</h2>
+    <p>Progressive skill training from fundamentals to feats like muscle-ups, planches, and front levers. Learn clean form, structured progressions, and when to advance.</p>
+  </section>
+
+  <section id="hypertrophy" class="section">
+    <h2>Hypertrophy</h2>
+    <p>Evidence-based muscle growth through RPE, volume control, overload techniques, and effective recovery — building size and strength with intent.</p>
+  </section>
+
+  <section id="endurance" class="section">
+    <h2>Endurance</h2>
+    <p>Build cardiovascular dominance and muscular endurance through aerobic/anaerobic systems, lactate threshold work, and strategic zone-based programming.</p>
+  </section>
+
   <section id="athleticism" class="section">
     <h2>Athleticism</h2>
-    <p>Train to move explosively, react fast, and dominate your sport. Focused on speed, agility, coordination, and full-body control.</p>
+    <p>Train like an athlete. Develop speed, explosiveness, coordination, and agility with real athletic drills and sport science foundations.</p>
   </section>
 
   <section id="coach" class="section">
     <h2>AI Coach</h2>
-    <p>Your AI-powered training companion. It adapts your plans, creates custom workouts, and evolves as you improve to always push you forward.</p>
+    <p>Your evolving digital trainer. Get personalized workouts, recovery cues, adaptive feedback, and periodization logic—all built for your unique progress path.</p>
   </section>
 </body>
 </html>

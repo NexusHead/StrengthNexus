@@ -1,381 +1,206 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StrengthMind | Bodyweight Mastery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    :root {
-      --primary: crimson;
-      --primary-dark: #a30d23;
-      --bg-dark: #111;
-      --bg-medium: #222;
-      --bg-light: #333;
-      --text-light: #fff;
-      --text-muted: #ccc;
-    }* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>StrengthMind | Bodyweight Mastery</title>  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+  <style>  
+    :root {  
+      --primary: crimson;  
+      --primary-dark: #a30d23;  
+      --bg-dark: #111;  
+      --bg-medium: #222;  
+      --bg-light: #333;  
+      --text-light: #fff;  
+      --text-muted: #ccc;  
+    }* {  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+}body { font-family: 'Montserrat', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }  .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+
+header { background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(220,20,60,0.6)), url('https://via.placeholder.com/1200x600') center/cover no-repeat; padding: 100px 20px 80px; text-align: center; }
+
+.logo { font-family: 'Bebas Neue', cursive; font-size: 32px; color: var(--text-light); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+
+.logo i { color: var(--primary); margin-right: 10px; }
+
+h1 { font-size: 64px; font-family: 'Bebas Neue', cursive; color: var(--text-light); text-transform: uppercase; letter-spacing: 2px; }
+
+h1 span { color: var(--primary); }
+
+.subtitle { font-size: 20px; color: var(--text-muted); margin: 20px auto 30px; max-width: 800px; }
+
+.cta-button { background: var(--primary); color: #fff; padding: 15px 30px; border-radius: 50px; font-weight: 600; text-transform: uppercase; text-decoration: none; transition: 0.3s ease; display: inline-block; box-shadow: 0 4px 10px rgba(220,20,60,0.4); }
+
+.cta-button:hover { background: var(--primary-dark); transform: translateY(-3px); }
+
+section { padding: 80px 0; }
+
+section:nth-child(even) { background: var(--bg-medium); }
+
+.section-header { text-align: center; margin-bottom: 50px; }
+
+h2 { font-size: 42px; font-family: 'Bebas Neue', cursive; position: relative; display: inline-block; }
+
+h2::after { content: ''; position: absolute; width: 80px; height: 4px; background: var(--primary); bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+.exercise-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
+
+.exercise-card { background: var(--bg-light); border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+.exercise-header { background: var(--primary); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+
+.exercise-title { font-weight: 600; }
+
+.exercise-icon { transition: transform 0.3s ease; }
+
+.exercise-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; background: var(--bg-medium); padding: 0 20px; }
+
+.exercise-content.active { max-height: 1000px; padding: 20px; }
+
+.progression-list { list-style: none; padding: 0; }
+
+.progression-item { margin-bottom: 15px; position: relative; padding-left: 40px; }
+
+.progression-item::before { content: attr(data-level); position: absolute; top: 0; left: 0; width: 28px; height: 28px; background: var(--primary); color: white; border-radius: 50%; font-size: 12px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+
+.progression-title { font-weight: 600; }
+
+.progression-desc { font-size: 14px; color: var(--text-muted); }
+
+footer { background: #0a0a0a; padding: 40px 20px; text-align: center; }
+
+.footer-logo { font-family: 'Bebas Neue', cursive; font-size: 24px; color: var(--text-light); }
+
+.footer-text { font-size: 14px; color: var(--text-muted); margin-top: 10px; }
+
+@media (max-width: 768px) { h1 { font-size: 48px; } .exercise-grid { grid-template-columns: 1fr; } }
+
+  </style>  
+</head>  
+<body><header>  
+  <div class="container">  
+    <div class="logo"><i class="fas fa-dumbbell"></i>STRENGTHMIND</div>  
+    <h1>Bodyweight <span>Mastery</span></h1>  
+    <p class="subtitle">Master your bodyweight through elite, scalable progressions. Get strong anytime, anywhere.</p>  
+    <a href="#exercises" class="cta-button">Start Training</a>  
+  </div>  
+</header><section id="exercises">  
+  <div class="container">  
+    <div class="section-header">  
+      <h2>Exercise Progressions</h2>  
+      <p>Follow these steps to master core bodyweight movements.</p>  
+    </div><div class="exercise-grid" id="exerciseBlocks">  
+  <!-- Exercise blocks will be injected here by JavaScript -->  
+</div>  </div>  
+</section><footer>  
+  <div class="footer-logo">STRENGTHMIND</div>  
+  <p class="footer-text">Train with intention. Build elite bodyweight strength anywhere.</p>  
+</footer><script>  
+  function toggleCard(element) {  
+    const content = element.nextElementSibling;  
+    const icon = element.querySelector('.exercise-icon');  
+    content.classList.toggle('active');  
+    icon.classList.toggle('rotate');  
+  }const exerciseData = [ { title: 'Vertical Pull', exercises: [ ['Dead Hang', 'Hang passively to build grip and shoulder strength.'], ['Scapular Pulls', 'Engage lats by pulling shoulder blades down.'], ['Assisted Pull-up', 'Use bands or legs for help.'], ['Negative Pull-up', 'Lower slowly from top position.'], ['Chin-up', 'Pull up with palms facing you.'], ['Pull-up', 'Pull chin above bar, palms away.'], ['Archer Pull-up', 'Shift weight to one side per rep.'], ['L-sit Pull-up', 'Pull-up while legs are straight out.'], ['Towel Pull-up', 'Grip towels for forearm strength.'], ['Typewriter Pull-up', 'Move side to side at top.'] ] }, { title: 'Horizontal Pull', exercises: [ ['Table Rows', 'Pull chest to a low bar under a table.'], ['Feet Elevated Rows', 'Same as table rows, but harder.'], ['Underhand Rows', 'Palms toward you for biceps.'], ['Wide Grip Rows', 'Wider hands for rear delts.'], ['One Arm Rows', 'Use one arm to isolate strength.'], ['Towel Rows', 'Grip towels for pulling and grip.'], ['Explosive Rows', 'Pull fast and control down.'], ['Archer Rows', 'Shift side to side.'], ['Bent Knee Rows', 'Modify body angle.'], ['L-Sit Rows', 'Hold legs out straight while rowing.'] ] }, { title: 'Vertical Push', exercises: [ ['Pike Push-up', 'Push from hips-high position.'], ['Elevated Pike Push-up', 'Feet on box for more resistance.'], ['Wall Walk', 'Climb wall into handstand.'], ['Wall Hold', 'Hold handstand against wall.'], ['Wall Handstand Push-up', 'Lower down against wall.'], ['Partial Handstand Push-up', 'Go halfway down.'], ['Full Handstand Push-up', 'Full range rep.'], ['Deficit Handstand Push-up', 'Use blocks for deeper ROM.'], ['Freestanding Hold', 'Balance handstand.'], ['Freestanding Push-up', 'Push-up with balance only.'] ] }, { title: 'Horizontal Push', exercises: [ ['Wall Push-up', 'Push-up against wall.'], ['Incline Push-up', 'Hands elevated on surface.'], ['Knee Push-up', 'Push-up on knees.'], ['Standard Push-up', 'Classic form, body straight.'], ['Wide Push-up', 'Hands wider for chest.'], ['Diamond Push-up', 'Hands close for triceps.'], ['Archer Push-up', 'Push to one side per rep.'], ['Pseudo Planche Push-up', 'Lean forward for shoulder load.'], ['Clap Push-up', 'Explosive push.'], ['Typewriter Push-up', 'Side to side at bottom.'] ] }, { title: 'Core', exercises: [ ['Hollow Hold', 'Hold tight banana shape.'], ['Leg Raises', 'Lift straight legs from floor.'], ['Knee Tucks', 'Tuck knees to chest.'], ['L-Sit', 'Hold legs out on dip bars.'], ['V-Ups', 'Touch toes with legs and arms up.'], ['Flutter Kicks', 'Quick short kicks.'], ['Plank', 'Forearm hold, straight body.'], ['Side Plank', 'One arm, body sideways.'], ['Dragon Flag', 'Lower body from shoulders.'], ['Windshield Wipers', 'Rotate legs side to side.'] ] }, { title: 'Statics', exercises: [ ['Plank', 'Hold tight body on elbows.'], ['Side Plank', 'Side hold on one elbow.'], ['Wall Sit', 'Hold sitting position on wall.'], ['L-Sit', 'Hold legs out straight.'], ['Handstand Hold', 'Hold upside down.'], ['Tucked Front Lever', 'Tuck knees while hanging.'], ['Tucked Back Lever', 'Hold horizontal on bar.'], ['Crow Hold', 'Balance on hands.'], ['Headstand Hold', 'Balance on head and hands.'], ['Glute Bridge Hold', 'Hold hips raised position.'] ] } ];  ['Side Plank', 'One arm, body sideways.'],
+['Plank to Push-up', 'Transition from plank to push-up.'],
+['Hanging Knee Raises', 'Hang and raise knees to core.']
+]
+},
+{
+title: 'Legs',
+exercises: [
+['Wall Sit', 'Hold seated position against wall.'],
+['Step-ups', 'Step onto platform, drive through heel.'],
+['Lunges', 'Alternate legs stepping forward.'],
+['Split Squats', 'Back foot elevated.'],
+['Squats', 'Classic bodyweight squat.'],
+['Jump Squats', 'Explosive jump from squat.'],
+['Cossack Squat', 'Side lunge with depth.'],
+['Shrimp Squat', 'Hold rear leg, squat down.'],
+['Pistol Squat', 'One-leg squat, other leg straight.'],
+['Explosive Pistol Squat', 'Jump up from pistol squat.']
+]
+},
+{
+title: 'Isometric Mastery',
+exercises: [
+['Wall Push Hold', 'Hold push-up against a wall.'],
+['Mid Push-up Hold', 'Hold halfway down.'],
+['Dip Hold', 'Hold top of dip position.'],
+['Pull-up Hold', 'Hold chin over bar.'],
+['L-sit Hold', 'Legs straight, body upright.'],
+['Tuck Planche', 'Balance on hands, knees tucked.'],
+['Wall Handstand Hold', 'Hold against wall.'],
+['Freestanding Handstand Hold', 'Balance without wall.'],
+['Hollow Body Hold', 'Tight banana shape on floor.'],
+['Side Plank Hold', 'Hold body sideways.']
+]
 }
+];
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  overflow-x: hidden;
-}
+const exerciseBlocks = document.getElementById("exerciseBlocks");
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
+exerciseData.forEach((block) => {
+const card = document.createElement("div");
+card.className = "exercise-card";
 
-header {
-  background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(220,20,60,0.6)), url('https://via.placeholder.com/1200x600') center/cover no-repeat;
-  padding: 100px 20px 80px;
-  text-align: center;
-}
+const header = document.createElement("div");  
+header.className = "exercise-header";  
+header.innerHTML = `  
+  <span class="exercise-title">${block.title}</span>  
+  <i class="fas fa-chevron-down exercise-icon"></i>  
+`;  
+header.onclick = () => toggleCard(header);  
 
-.logo {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 32px;
-  color: var(--text-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
+const content = document.createElement("div");  
+content.className = "exercise-content";  
 
-.logo i {
-  color: var(--primary);
-  margin-right: 10px;
-}
+const list = document.createElement("ul");  
+list.className = "progression-list";  
 
-h1 {
-  font-size: 64px;
-  font-family: 'Bebas Neue', cursive;
-  color: var(--text-light);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
+block.exercises.forEach((exercise, index) => {  
+  const item = document.createElement("li");  
+  item.className = "progression-item";  
+  item.setAttribute("data-level", index + 1);  
 
-h1 span {
-  color: var(--primary);
-}
+  item.innerHTML = `  
+    <div class="progression-title">${exercise[0]}</div>  
+    <div class="progression-desc">${exercise[1]}</div>  
+  `;  
+  list.appendChild(item);  
+});  
 
-.subtitle {
-  font-size: 20px;
-  color: var(--text-muted);
-  margin: 20px auto 30px;
-  max-width: 800px;
-}
+content.appendChild(list);  
+card.appendChild(header);  
+card.appendChild(content);  
+exerciseBlocks.appendChild(card);
 
-.cta-button {
-  background: var(--primary);
-  color: #fff;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: 0.3s ease;
-  display: inline-block;
-  box-shadow: 0 4px 10px rgba(220,20,60,0.4);
-}
+});
+</script>
 
-.cta-button:hover {
-  background: var(--primary-dark);
-  transform: translateY(-3px);
-}
+</body>  
+</html>  
+const container = document.getElementById('exerciseBlocks');  exerciseData.forEach((group) => { const card = document.createElement('div'); card.classList.add('exercise-card');
 
-section {
-  padding: 80px 0;
-}
+card.innerHTML = `
 
-section:nth-child(even) {
-  background: var(--bg-medium);
-}
+  <div class="exercise-header" onclick="toggleCard(this)">  
+    <h3 class="exercise-title">${group.title}</h3>  
+    <i class="fas fa-chevron-down exercise-icon"></i>  
+  </div>  
+  <div class="exercise-content">  
+    <ul class="progression-list">  
+      ${group.exercises.map((ex, i) => `  
+        <li class="progression-item" data-level="${i + 1}">  
+          <div class="progression-title">${ex[0]}</div>  
+          <div class="progression-desc">${ex[1]}</div>  
+        </li>  
+      `).join('')}  
+    </ul>  
+  </div>  
+`;  container.appendChild(card);
 
-.section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
+}); </script></body>
 
-h2 {
-  font-size: 42px;
-  font-family: 'Bebas Neue', cursive;
-  position: relative;
-  display: inline-block;
-}
-
-h2::after {
-  content: '';
-  position: absolute;
-  width: 80px;
-  height: 4px;
-  background: var(--primary);
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.exercise-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-}
-
-.exercise-card {
-  background: var(--bg-light);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.exercise-header {
-  background: var(--primary);
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.exercise-title {
-  font-weight: 600;
-}
-
-.exercise-icon {
-  transition: transform 0.3s ease;
-}
-
-.exercise-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  background: var(--bg-medium);
-  padding: 0 20px;
-}
-
-.exercise-content.active {
-  max-height: 1000px;
-  padding: 20px;
-}
-
-.progression-list {
-  list-style: none;
-  padding: 0;
-}
-
-.progression-item {
-  margin-bottom: 15px;
-  position: relative;
-  padding-left: 40px;
-}
-
-.progression-item::before {
-  content: attr(data-level);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 28px;
-  height: 28px;
-  background: var(--primary);
-  color: white;
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.progression-title {
-  font-weight: 600;
-}
-
-.progression-desc {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-footer {
-  background: #0a0a0a;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-logo {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 24px;
-  color: var(--text-light);
-}
-
-.footer-text {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 48px;
-  }
-  .exercise-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-  </style>
-</head>
-<body><header>
-  <div class="container">
-    <div class="logo"><i class="fas fa-dumbbell"></i>STRENGTHMIND</div>
-    <h1>Bodyweight <span>Mastery</span></h1>
-    <p class="subtitle">Master your bodyweight through elite, scalable progressions. Get strong anytime, anywhere.</p>
-    <a href="#exercises" class="cta-button">Start Training</a>
-  </div>
-</header><section id="exercises">
-  <div class="container">
-    <div class="section-header">
-      <h2>Exercise Progressions</h2>
-      <p>Follow these steps to master core bodyweight movements.</p>
-    </div><div class="exercise-grid" id="exerciseBlocks">
-  <!-- Exercise blocks will be injected here by JavaScript -->
-</div>
-
-  </div>
-</section><footer>
-  <div class="footer-logo">STRENGTHMIND</div>
-  <p class="footer-text">Train with intention. Build elite bodyweight strength anywhere.</p>
-</footer><script>
-  function toggleCard(element) {
-    const content = element.nextElementSibling;
-    const icon = element.querySelector('.exercise-icon');
-    content.classList.toggle('active');
-    icon.classList.toggle('rotate');
-  }
-
-  const exerciseData = [
-    {
-      title: 'Vertical Pull',
-      exercises: [
-        ['Dead Hang', 'Hang passively to build grip and shoulder strength.'],
-        ['Scapular Pulls', 'Engage lats by pulling shoulder blades down.'],
-        ['Assisted Pull-up', 'Use bands or legs for help.'],
-        ['Negative Pull-up', 'Lower slowly from top position.'],
-        ['Chin-up', 'Pull up with palms facing you.'],
-        ['Pull-up', 'Pull chin above bar, palms away.'],
-        ['Archer Pull-up', 'Shift weight to one side per rep.'],
-        ['L-sit Pull-up', 'Pull-up while legs are straight out.'],
-        ['Towel Pull-up', 'Grip towels for forearm strength.'],
-        ['Typewriter Pull-up', 'Move side to side at top.']
-      ]
-    },
-    {
-      title: 'Horizontal Pull',
-      exercises: [
-        ['Table Rows', 'Pull chest to a low bar under a table.'],
-        ['Feet Elevated Rows', 'Same as table rows, but harder.'],
-        ['Underhand Rows', 'Palms toward you for biceps.'],
-        ['Wide Grip Rows', 'Wider hands for rear delts.'],
-        ['One Arm Rows', 'Use one arm to isolate strength.'],
-        ['Towel Rows', 'Grip towels for pulling and grip.'],
-        ['Explosive Rows', 'Pull fast and control down.'],
-        ['Archer Rows', 'Shift side to side.'],
-        ['Bent Knee Rows', 'Modify body angle.'],
-        ['L-Sit Rows', 'Hold legs out straight while rowing.']
-      ]
-    },
-    {
-      title: 'Vertical Push',
-      exercises: [
-        ['Pike Push-up', 'Push from hips-high position.'],
-        ['Elevated Pike Push-up', 'Feet on box for more resistance.'],
-        ['Wall Walk', 'Climb wall into handstand.'],
-        ['Wall Hold', 'Hold handstand against wall.'],
-        ['Wall Handstand Push-up', 'Lower down against wall.'],
-        ['Partial Handstand Push-up', 'Go halfway down.'],
-        ['Full Handstand Push-up', 'Full range rep.'],
-        ['Deficit Handstand Push-up', 'Use blocks for deeper ROM.'],
-        ['Freestanding Hold', 'Balance handstand.'],
-        ['Freestanding Push-up', 'Push-up with balance only.']
-      ]
-    },
-    {
-      title: 'Horizontal Push',
-      exercises: [
-        ['Wall Push-up', 'Push-up against wall.'],
-        ['Incline Push-up', 'Hands elevated on surface.'],
-        ['Knee Push-up', 'Push-up on knees.'],
-        ['Standard Push-up', 'Classic form, body straight.'],
-        ['Wide Push-up', 'Hands wider for chest.'],
-        ['Diamond Push-up', 'Hands close for triceps.'],
-        ['Archer Push-up', 'Push to one side per rep.'],
-        ['Pseudo Planche Push-up', 'Lean forward for shoulder load.'],
-        ['Clap Push-up', 'Explosive push.'],
-        ['Typewriter Push-up', 'Side to side at bottom.']
-      ]
-    },
-    {
-      title: 'Core',
-      exercises: [
-        ['Hollow Hold', 'Hold tight banana shape.'],
-        ['Leg Raises', 'Lift straight legs from floor.'],
-        ['Knee Tucks', 'Tuck knees to chest.'],
-        ['L-Sit', 'Hold legs out on dip bars.'],
-        ['V-Ups', 'Touch toes with legs and arms up.'],
-        ['Flutter Kicks', 'Quick short kicks.'],
-        ['Plank', 'Forearm hold, straight body.'],
-        ['Side Plank', 'One arm, body sideways.'],
-        ['Dragon Flag', 'Lower body from shoulders.'],
-        ['Windshield Wipers', 'Rotate legs side to side.']
-      ]
-    },
-    {
-      title: 'Statics',
-      exercises: [
-        ['Plank', 'Hold tight body on elbows.'],
-        ['Side Plank', 'Side hold on one elbow.'],
-        ['Wall Sit', 'Hold sitting position on wall.'],
-        ['L-Sit', 'Hold legs out straight.'],
-        ['Handstand Hold', 'Hold upside down.'],
-        ['Tucked Front Lever', 'Tuck knees while hanging.'],
-        ['Tucked Back Lever', 'Hold horizontal on bar.'],
-        ['Crow Hold', 'Balance on hands.'],
-        ['Headstand Hold', 'Balance on head and hands.'],
-        ['Glute Bridge Hold', 'Hold hips raised position.']
-      ]
-    }
-  ];
-
-  const container = document.getElementById('exerciseBlocks');
-
-  exerciseData.forEach((group) => {
-    const card = document.createElement('div');
-    card.classList.add('exercise-card');
-
-    card.innerHTML = `
-      <div class="exercise-header" onclick="toggleCard(this)">
-        <h3 class="exercise-title">${group.title}</h3>
-        <i class="fas fa-chevron-down exercise-icon"></i>
-      </div>
-      <div class="exercise-content">
-        <ul class="progression-list">
-          ${group.exercises.map((ex, i) => `
-            <li class="progression-item" data-level="${i + 1}">
-              <div class="progression-title">${ex[0]}</div>
-              <div class="progression-desc">${ex[1]}</div>
-            </li>
-          `).join('')}
-        </ul>
-      </div>
-    `;
-
-    container.appendChild(card);
-  });
-</script></body>
 </html>

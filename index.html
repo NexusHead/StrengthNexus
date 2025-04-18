@@ -1,144 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StrengthMind</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
+      font-family: 'Bebas Neue', sans-serif;
       background-color: #0a0a0a;
       color: white;
-      font-family: 'Bebas Neue', sans-serif;
     }
-
     header {
       text-align: center;
       padding: 4rem 1rem 1rem;
     }
-
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 4rem;
-      margin: 0;
+      color: white;
     }
-
-    .title span:first-child {
-      color: black;
-      background-color: crimson;
-      padding: 0.2rem 0.6rem;
-      border-radius: 8px;
-    }
-
-    .title span:last-child {
+    h1 span.red {
       color: crimson;
     }
-
-    .tagline {
-      font-size: 1.5rem;
-      color: #aaa;
-      margin-top: 1rem;
+    .description {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #bbb;
     }
-
     nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      margin: 3rem auto 2rem;
-      max-width: 900px;
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
     }
-
-    .nav-link {
-      background-color: #1a1a1a;
+    nav a {
       border: 2px solid crimson;
+      padding: 0.8rem 1.5rem;
       color: crimson;
       text-decoration: none;
-      padding: 1rem 2rem;
-      border-radius: 12px;
       font-size: 1.2rem;
+      font-family: 'Montserrat', sans-serif;
       transition: 0.3s;
-      text-align: center;
-      flex: 1 1 calc(33.333% - 2rem);
     }
-
-    .nav-link:hover {
+    nav a:hover {
       background-color: crimson;
       color: white;
     }
-
-    .section-container {
-      max-width: 1100px;
-      margin: 4rem auto;
-      padding: 1rem;
+    .section-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem 1rem 1rem;
     }
-
     .section {
-      background-color: #111;
-      border-left: 6px solid crimson;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
+      border: 2px solid crimson;
+      padding: 1.5rem;
+      max-width: 300px;
+      flex: 1;
+      text-align: center;
+      font-size: 1rem;
     }
-
-    .section h2 {
+    .section-title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.2rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+      color: crimson;
+      margin-bottom: 1rem;
     }
-
-    .section p {
+    .bottom-section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    .bottom-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: crimson;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .bottom-section p {
       font-size: 1.1rem;
       color: #ddd;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-      .nav-link {
-        flex: 1 1 100%;
-      }
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1 class="title"><span>Strength</span><span>Mind</span></h1>
-    <div class="tagline">Where Purpose Meets Power</div>
-  </header>
-
-  <nav>
-    <a class="nav-link" href="bodyweight.html">Bodyweight Mastery</a>
-    <a class="nav-link" href="#">Hypertrophy</a>
-    <a class="nav-link" href="#">Endurance</a>
-    <a class="nav-link" href="#">Athleticism</a>
-    <a class="nav-link" href="#">AI Coach</a>
-  </nav>
-
-  <div class="section-container">
-
+    <h1><span class="black">Strength</span><span class="red">Mind</span></h1>
+    <p class="description">Where purpose meets progression.</p>
+  </header>  <nav>
+    <a href="bodyweight.html">Bodyweight</a>
+    <a href="hypertrophy.html">Hypertrophy</a>
+    <a href="endurance.html">Endurance</a>
+    <a href="athleticism.html">Athleticism</a>
+    <a href="coach.html">AI Coach</a>
+  </nav>  <section class="section-group">
     <div class="section">
-      <h2>What is StrengthMind?</h2>
-      <p>StrengthMind is your personal fortress of strength, knowledge, and evolution. Whether you want to gain muscle, burn fat, or build total athleticism — StrengthMind makes the process accessible and powerful for anyone, anywhere.</p>
+      <h3 class="section-title">Bodyweight Mastery</h3>
+      <p>Train anytime, anywhere. Master your body through structured calisthenics and progressive strength techniques.</p>
     </div>
-
     <div class="section">
-      <h2>Why StrengthMind Exists</h2>
-      <p>StrengthMind aims to give anyone willing to change the center of everything they need. Whether it’s gaining muscle, getting better at a sport, or losing weight — it’s all found here. No gimmicks, no confusion. Just transformation.</p>
+      <h3 class="section-title">Hypertrophy</h3>
+      <p>Stimulate growth and build aesthetic muscle with science-backed intensity techniques and structured routines.</p>
     </div>
-
     <div class="section">
-      <h2>End Goal</h2>
-      <p>To be proud of what you’ve become. Not for anyone else — but for yourself. StrengthMind’s path is forged by sweat, focus, and relentless improvement.</p>
+      <h3 class="section-title">Endurance</h3>
+      <p>Push beyond limits. Condition your lungs, heart, and mind for peak performance and stamina in any domain.</p>
     </div>
-
+  </section>  <section class="section-group">
     <div class="section">
-      <h2>Motivation</h2>
-      <p>"I got tired of seeing people overcomplicate fitness — turning it into a science fair or a closed-off community. I made StrengthMind with the purpose of inviting people who want to change and helping them achieve their goals. I'm not perfect either. I'm also walking this path. The mission of StrengthMind is to create a truly strong community of people who strive to be their best selves."</p>
+      <h3 class="section-title">Athleticism</h3>
+      <p>Run faster. Jump higher. Move smarter. Train to be explosive, mobile, and dominant across all sports.</p>
     </div>
+    <div class="section">
+      <h3 class="section-title">AI Coach</h3>
+      <p>Get custom guidance, programs, and feedback tailored to your goals with StrengthMind’s AI coaching engine.</p>
+    </div>
+  </section>  <section class="bottom-section">
+    <h2>Why StrengthMind Exists</h2>
+    <p>StrengthMind aims to get any and everyone willing to change the center of everything they need. Be it gaining muscle, improving in a sport, or losing weight — it’s all found here.</p><h2>Motivation</h2>
+<p>I got tired of seeing people overcomplicate fitness — turning gyms into science fairs or exclusive cliques. I created StrengthMind to welcome those who want to transform. I’m not perfect either — I’m walking this path too. The mission is to build a truly strong community of people striving to become their best selves.</p>
 
-  </div>
+<h2>End Goal</h2>
+<p>To be proud of what you've become.</p>
 
+  </section>
 </body>
 </html>

@@ -6,64 +6,64 @@ export default function Page() {
 
   const progressions = {
     pushups: [
-      { name: "Wall Push-ups", description: "Push-ups performed against a wall, ideal for beginners." },
-      { name: "Incline Push-ups", description: "Push-ups performed with hands elevated on a surface to reduce difficulty." },
-      { name: "Knee Push-ups", description: "Push-ups done while kneeling to make them easier for beginners." },
-      { name: "Standard Push-ups", description: "Classic push-up with a full body plank, targeting chest and triceps." },
-      { name: "Diamond Push-ups", description: "Push-ups with hands placed close together in a diamond shape to target triceps." },
-      { name: "Decline Push-ups", description: "Push-ups with feet elevated, increasing upper chest activation." },
-      { name: "Clapping Push-ups", description: "Explosive push-ups where you push off the ground and clap hands." },
-      { name: "Archer Push-ups", description: "A wider hand placement push-up that targets one arm at a time." },
-      { name: "One-arm Push-ups (Assisted)", description: "One-arm push-ups with assistance, usually through a support or a wider stance." },
-      { name: "One-arm Push-ups (Unassisted)", description: "Push-ups done with one arm, requiring full body control and strength." }
+      "Wall Push-ups",
+      "Incline Push-ups",
+      "Knee Push-ups",
+      "Standard Push-ups",
+      "Diamond Push-ups",
+      "Decline Push-ups",
+      "Clapping Push-ups",
+      "Archer Push-ups",
+      "One-arm Push-ups (Assisted)",
+      "One-arm Push-ups (Unassisted)"
     ],
     pullups: [
-      { name: "Dead Hang", description: "Hanging from the pull-up bar to build grip strength." },
-      { name: "Assisted Pull-ups (Resistance Bands)", description: "Pull-ups with the help of resistance bands to assist the movement." },
-      { name: "Negative Pull-ups", description: "Slowly lowering yourself from the bar to build eccentric strength." },
-      { name: "Jumping Pull-ups", description: "Pull-ups initiated with a jump, focusing on the pulling phase." },
-      { name: "Standard Pull-ups", description: "Classic pull-ups performed with an overhand grip targeting the back and biceps." },
-      { name: "Chest-to-Bar Pull-ups", description: "Pull-ups where the chest touches the bar for a greater range of motion." },
-      { name: "Kipping Pull-ups", description: "Dynamic pull-ups using body momentum for more repetitions." },
-      { name: "Strict Pull-ups", description: "Pull-ups performed with strict form, avoiding body swing." },
-      { name: "Weighted Pull-ups", description: "Pull-ups performed with additional weight for extra resistance." },
-      { name: "One-arm Pull-ups", description: "Pull-ups performed with one arm, a high-level skill requiring significant strength." }
+      "Dead Hang",
+      "Assisted Pull-ups (Resistance Bands)",
+      "Negative Pull-ups",
+      "Jumping Pull-ups",
+      "Standard Pull-ups",
+      "Chest-to-Bar Pull-ups",
+      "Kipping Pull-ups",
+      "Strict Pull-ups",
+      "Weighted Pull-ups",
+      "One-arm Pull-ups"
     ],
     dips: [
-      { name: "Bench Dips", description: "Dips using a bench for support, targeting triceps." },
-      { name: "Assisted Dips (Resistance Bands)", description: "Dips with assistance from resistance bands to help with the movement." },
-      { name: "Negative Dips", description: "Slowly lowering yourself into the dip position to increase eccentric strength." },
-      { name: "Standard Dips", description: "Classic dip performed on parallel bars, targeting chest, triceps, and shoulders." },
-      { name: "Deep Dips", description: "Deeper range of motion dips, increasing the stretch at the bottom." },
-      { name: "Russian Dips", description: "A variation involving a reverse dip motion, engaging shoulders more." },
-      { name: "Ring Dips", description: "Dips performed on gymnastic rings, adding instability and engaging more stabilizers." },
-      { name: "Weighted Dips", description: "Dips performed with additional weight to increase difficulty." },
-      { name: "Explosive Dips", description: "Dips performed with explosive force, focusing on power." },
-      { name: "Full Russian Dips", description: "An advanced dip variation where you move through a deep range, requiring significant mobility." }
+      "Bench Dips",
+      "Assisted Dips (Resistance Bands)",
+      "Negative Dips",
+      "Standard Dips",
+      "Deep Dips",
+      "Russian Dips",
+      "Ring Dips",
+      "Weighted Dips",
+      "Explosive Dips",
+      "Full Russian Dips"
     ],
     squats: [
-      { name: "Bodyweight Squats", description: "Basic squat performed with bodyweight, targeting quads and glutes." },
-      { name: "Wall Squats", description: "Squats performed with the back against a wall for support and stability." },
-      { name: "Goblet Squats", description: "Squats holding a dumbbell or kettlebell at chest height, engaging the core." },
-      { name: "Pistol Squats (Assisted)", description: "One-legged squats with assistance, usually using a hand for support." },
-      { name: "Pistol Squats", description: "Advanced single-leg squats requiring balance, flexibility, and strength." },
-      { name: "Jump Squats", description: "Explosive squats where you jump as you come up, adding power and explosiveness." },
-      { name: "Bulgarian Split Squats", description: "One-legged squat performed with the rear leg elevated on a bench or platform." },
-      { name: "Box Jumps", description: "Explosive jump onto a box or platform, increasing power and leg strength." },
-      { name: "Single-leg Squats", description: "One-legged squats focusing on balance and unilateral leg strength." },
-      { name: "One-legged Squats (Advanced)", description: "Advanced pistol squats performed without any assistance or support." }
+      "Bodyweight Squats",
+      "Wall Squats",
+      "Goblet Squats",
+      "Pistol Squats (Assisted)",
+      "Pistol Squats",
+      "Jump Squats",
+      "Bulgarian Split Squats",
+      "Box Jumps",
+      "Single-leg Squats",
+      "One-legged Squats (Advanced)"
     ],
     legRaises: [
-      { name: "Lying Leg Raises", description: "Lying on your back and raising your legs towards the ceiling, engaging the lower abs." },
-      { name: "Bent-Knee Leg Raises", description: "Leg raises performed with bent knees, making the exercise slightly easier." },
-      { name: "Straight Leg Raises", description: "Raising straight legs to target the lower abs and hip flexors." },
-      { name: "Hanging Knee Raises", description: "Knee raises performed while hanging from a bar, engaging the core and hip flexors." },
-      { name: "Hanging Leg Raises", description: "Leg raises performed while hanging from a bar, targeting the entire core." },
-      { name: "V-Ups", description: "A combination of a sit-up and leg raise, targeting the entire abdominal area." },
-      { name: "Dragon Flags", description: "Advanced core exercise involving lowering and raising your body in a straight line." },
-      { name: "Windshield Wipers", description: "Hanging leg raises with a side-to-side motion to target the obliques." },
-      { name: "Toes-to-bar", description: "Raising your legs to touch the bar while hanging, engaging the core and hip flexors." },
-      { name: "Front Lever Raises", description: "A core-intensive move where you lift your body into a horizontal position while hanging." }
+      "Lying Leg Raises",
+      "Bent-Knee Leg Raises",
+      "Straight Leg Raises",
+      "Hanging Knee Raises",
+      "Hanging Leg Raises",
+      "V-Ups",
+      "Dragon Flags",
+      "Windshield Wipers",
+      "Toes-to-bar",
+      "Front Lever Raises"
     ]
   };
 
@@ -101,9 +101,7 @@ export default function Page() {
             <h3 className="text-xl mb-4">10-Step Progression for {capitalizeFirstLetter(activeTab)}</h3>
             <ul className="list-disc list-inside">
               {progressions[activeTab].map((step, index) => (
-                <li key={index}>
-                  <strong>{step.name}:</strong> {step.description}
-                </li>
+                <li key={index}>{step}</li>
               ))}
             </ul>
           </div>

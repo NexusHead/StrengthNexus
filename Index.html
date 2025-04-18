@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strengthmind | The Self-Made Path</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #111; color: #fff; }
+    header { background: #000; padding: 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 2em; letter-spacing: 1px; }
+    nav { display: flex; justify-content: center; background: #222; flex-wrap: wrap; }
+    nav a {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: #eee;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { background: #444; }
+    .section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { border-bottom: 2px solid #555; padding-bottom: 10px; }
+    ul { line-height: 1.8; }
+    select, button, textarea {
+      padding: 10px;
+      font-size: 1em;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 500px;
+    }
+    textarea {
+      margin-top: 20px;
+      height: 200px;
+      background: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>STRENGTHMIND</h1>
+    <p>Master Your Body. Master Your Mind. Rise Above Limits.</p>
+  </header>
+  <nav>
+    <a href="#bodyweight">Bodyweight Mastery</a>
+    <a href="#hypertrophy">Hypertrophy</a>
+    <a href="#endurance">Endurance</a>
+    <a href="#athleticism">Athleticism</a>
+    <a href="#coach">AI Coach</a>
+  </nav>
+
+  <div class="section" id="bodyweight">
+    <h2>Bodyweight Mastery</h2>
+    <ul>
+      <li>Vertical Pull: Prep to Advanced (Pull-ups to Front Lever)</li>
+      <li>Vertical Push: Pike Push-ups to 90° Handstand Push-up</li>
+      <li>Horizontal Pull & Push: Progressions, Preps, Technique</li>
+      <li>Core Training: L-Sits, Dragon Flags, and more</li>
+      <li>Training templates for minimalist mastery</li>
+    </ul>
+  </div>
+
+  <div class="section" id="hypertrophy">
+    <h2>Hypertrophy</h2>
+    <ul>
+      <li>Learn RPE, RIR, and Optimal Volume</li>
+      <li>Smart Training: Science vs Ego Lifting</li>
+      <li>Form, Frequency, Specialization Cycles</li>
+      <li>Muscle Group Splits and Recovery Tips</li>
+    </ul>
+  </div>
+
+  <div class="section" id="endurance">
+    <h2>Endurance</h2>
+    <ul>
+      <li>Aerobic vs Anaerobic Training</li>
+      <li>Conditioning Circuits</li>
+      <li>Burpees, Bag Work, Rucking Plans</li>
+      <li>VO2, Threshold, and Zone Training Basics</li>
+    </ul>
+  </div>
+
+  <div class="section" id="athleticism">
+    <h2>Athleticism</h2>
+    <ul>
+      <li>Plyometrics and Sprint Work</li>
+      <li>Footwork, Mobility, CNS Training</li>
+      <li>Explosive Power + Agility Plans</li>
+      <li>Applied to Streetlifting, Combat, Powerlifting</li>
+    </ul>
+  </div>
+
+  <div class="section" id="coach">
+    <h2>AI Coach</h2>
+    <p>Select your focus area and get a personalized plan instantly.</p>
+    <select id="focus">
+      <option value="Bodyweight Mastery">Bodyweight Mastery</option>
+      <option value="Hypertrophy">Hypertrophy</option>
+      <option value="Endurance">Endurance</option>
+      <option value="Athleticism">Athleticism</option>
+    </select>
+    <button onclick="generatePlan()">Generate Plan</button>
+    <textarea id="planOutput" readonly placeholder="Your training plan will appear here..."></textarea>
+  </div>
+
+  <footer style="text-align:center; padding: 20px; background:#111; font-size: 0.9em; color: #777">
+    Built by the Self-Made. Strengthmind &copy; 2025
+  </footer>
+
+  <script>
+    function generatePlan() {
+      const focus = document.getElementById("focus").value;
+      let output = "";
+
+      if (focus === "Bodyweight Mastery") {
+        output = "Day 1: Pull-ups, Inverted Rows, Hollow Holds\n" +
+                 "Day 2: Push-ups, Pike Push-ups, Dips\n" +
+                 "Day 3: Core Circuit + Leg Raises + L-Sits\n" +
+                 "Day 4: Active Rest (Mobility)\n" +
+                 "Day 5-6: Repeat\n" +
+                 "Day 7: Recovery";
+      } else if (focus === "Hypertrophy") {
+        output = "Day 1: Push Focus – Bench, Incline DB, Flyes\n" +
+                 "Day 2: Pull Focus – Rows, Pull-ups, Curls\n" +
+                 "Day 3: Legs – Squats, Lunges, Hamstring Curls\n" +
+                 "Day 4: Rest\n" +
+                 "Day 5-6: Full Body High Volume\n" +
+                 "Day 7: Mobility + Recovery";
+      } else if (focus === "Endurance") {
+        output = "Day 1: 30 Min Run + Core Circuit\n" +
+                 "Day 2: HIIT Bodyweight Circuit\n" +
+                 "Day 3: Rucking or Weighted Walk\n" +
+                 "Day 4: Bag Work + Shadowboxing\n" +
+                 "Day 5: Burpee Ladder\n" +
+                 "Day 6: Zone 2 Endurance\n" +
+                 "Day 7: Rest";
+      } else if (focus === "Athleticism") {
+        output = "Day 1: Sprint Drills + Plyos\n" +
+                 "Day 2: Strength + Agility Ladder\n" +
+                 "Day 3: Footwork + Explosiveness\n" +
+                 "Day 4: Jump Technique + Resistance Sled\n" +
+                 "Day 5-6: Mixed Athletic Circuits\n" +
+                 "Day 7: Recovery and Mobility";
+      }
+
+      document.getElementById("planOutput").value = output;
+    }
+  </script>
+</body>
+</html>
+        

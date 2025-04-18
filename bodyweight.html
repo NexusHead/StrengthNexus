@@ -1,168 +1,564 @@
-import React, { useState } from "react";
-import Link from "next/link";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StrengthMind | Bodyweight Mastery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: crimson;
+      --primary-dark: #a30d23;
+      --bg-dark: #111;
+      --bg-medium: #222;
+      --bg-light: #333;
+      --text-light: #fff;
+      --text-muted: #ccc;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(220,20,60,0.8) 100%), url('/api/placeholder/1200/600') center/cover no-repeat;
+      padding: 100px 0 80px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 1px;
+    }
+    
+    .logo i {
+      margin-right: 10px;
+      color: var(--primary);
+    }
+    
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text-light);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+    }
+    
+    h1 span {
+      color: var(--primary);
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(220,20,60,0.4);
+    }
+    
+    .cta-button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(220,20,60,0.5);
+    }
+    
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .section:nth-child(odd) {
+      background-color: #151515;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--text-light);
+      position: relative;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--primary);
+    }
+    
+    .exercise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .exercise-card {
+      background-color: var(--bg-medium);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .exercise-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    
+    .exercise-header {
+      background-color: var(--primary);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .exercise-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      color: white;
+    }
+    
+    .exercise-icon {
+      color: white;
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+    
+    .exercise-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    
+    .exercise-content.active {
+      max-height: 1000px;
+    }
+    
+    .progression-list {
+      list-style: none;
+      padding: 20px;
+    }
+    
+    .progression-item {
+      margin-bottom: 15px;
+      padding-left: 35px;
+      position: relative;
+    }
+    
+    .progression-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .progression-item::before {
+      content: attr(data-level);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    .progression-title {
+      font-weight: 600;
+      color: white;
+      margin-bottom: 5px;
+    }
+    
+    .progression-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .gear-section {
+      background-color: var(--bg-medium);
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .gear-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .gear-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .gear-icon {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    
+    .gear-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    .gear-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    
+    footer {
+      background-color: #0a0a0a;
+      text-align: center;
+      padding: 40px 0;
+      margin-top: 50px;
+    }
+    
+    .footer-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+    
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 48px;
+      }
+      
+      .subtitle {
+        font-size: 18px;
+      }
+      
+      .exercise-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .gear-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-dumbbell"></i> STRENGTHMIND
+      </div>
+      <h1>Bodyweight <span>Mastery</span></h1>
+      <p class="subtitle">
+        Master your bodyweight through elite, scalable progressions in pulling, pushing, core, and static strength. Get strong anytime and anywhere.
+      </p>
+      <a href="#exercises" class="cta-button">Start Training</a>
+    </div>
+  </header>
 
-export default function Page() {
-  const [activeTab, setActiveTab] = useState("pushups"); // Initial tab
-
-  const progressions = {
-    pushups: [
-      "Wall Push-ups",
-      "Incline Push-ups",
-      "Knee Push-ups",
-      "Standard Push-ups",
-      "Diamond Push-ups",
-      "Decline Push-ups",
-      "Clapping Push-ups",
-      "Archer Push-ups",
-      "One-arm Push-ups (Assisted)",
-      "One-arm Push-ups (Unassisted)"
-    ],
-    pullups: [
-      "Dead Hang",
-      "Assisted Pull-ups (Resistance Bands)",
-      "Negative Pull-ups",
-      "Jumping Pull-ups",
-      "Standard Pull-ups",
-      "Chest-to-Bar Pull-ups",
-      "Kipping Pull-ups",
-      "Strict Pull-ups",
-      "Weighted Pull-ups",
-      "One-arm Pull-ups"
-    ],
-    dips: [
-      "Bench Dips",
-      "Assisted Dips (Resistance Bands)",
-      "Negative Dips",
-      "Standard Dips",
-      "Deep Dips",
-      "Russian Dips",
-      "Ring Dips",
-      "Weighted Dips",
-      "Explosive Dips",
-      "Full Russian Dips"
-    ],
-    squats: [
-      "Bodyweight Squats",
-      "Wall Squats",
-      "Goblet Squats",
-      "Pistol Squats (Assisted)",
-      "Pistol Squats",
-      "Jump Squats",
-      "Bulgarian Split Squats",
-      "Box Jumps",
-      "Single-leg Squats",
-      "One-legged Squats (Advanced)"
-    ],
-    legRaises: [
-      "Lying Leg Raises",
-      "Bent-Knee Leg Raises",
-      "Straight Leg Raises",
-      "Hanging Knee Raises",
-      "Hanging Leg Raises",
-      "V-Ups",
-      "Dragon Flags",
-      "Windshield Wipers",
-      "Toes-to-bar",
-      "Front Lever Raises"
-    ]
-  };
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
-  return (
-    <main className="min-h-screen w-full px-4 py-8 md:px-16 md:py-20">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center">Bodyweight Mastery</h1>
-
-        <p className="text-lg md:text-xl text-center mb-12">
-          Welcome to the Bodyweight Mastery hub. Everything you need to build supreme
-          calisthenics strength, technique, and athletic mastery is right here.
-        </p>
-
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Exercise Progressions</h2>
-          <div className="flex space-x-4 mb-8">
-            {["pushups", "pullups", "dips", "squats", "legRaises"].map((exercise) => (
-              <button
-                key={exercise}
-                onClick={() => handleTabClick(exercise)}
-                className={`py-2 px-4 rounded-md ${
-                  activeTab === exercise ? "bg-blue-500 text-white" : "bg-gray-200"
-                }`}
-              >
-                {capitalizeFirstLetter(exercise)}
-              </button>
-            ))}
+  <section class="section" id="exercises">
+    <div class="container">
+      <div class="section-header">
+        <h2>Exercise Progressions</h2>
+        <p>Follow these progressive steps to master each movement pattern</p>
+      </div>
+      
+      <div class="exercise-grid">
+        <!-- Vertical Pull -->
+        <div class="exercise-card">
+          <div class="exercise-header" onclick="toggleCard(this)">
+            <h3 class="exercise-title">Vertical Pull</h3>
+            <i class="fas fa-chevron-down exercise-icon"></i>
           </div>
-
-          <div>
-            <h3 className="text-xl mb-4">10-Step Progression for {capitalizeFirstLetter(activeTab)}</h3>
-            <ul className="list-disc list-inside">
-              {progressions[activeTab].map((step, index) => (
-                <li key={index}>{step}</li>
-              ))}
+          <div class="exercise-content">
+            <ul class="progression-list">
+              <li class="progression-item" data-level="1">
+                <div class="progression-title">Dead Hang</div>
+                <div class="progression-desc">Hang from a bar to build grip strength and shoulder stability. Focus on active shoulders.</div>
+              </li>
+              <li class="progression-item" data-level="2">
+                <div class="progression-title">Scapular Pull</div>
+                <div class="progression-desc">Activate your upper back by pulling shoulder blades down while hanging.</div>
+              </li>
+              <li class="progression-item" data-level="3">
+                <div class="progression-title">Australian Pull-ups</div>
+                <div class="progression-desc">Low bar rows focusing on lat engagement and proper pulling mechanics.</div>
+              </li>
+              <li class="progression-item" data-level="4">
+                <div class="progression-title">Negative Pull-ups</div>
+                <div class="progression-desc">Jump up and slowly lower yourself to strengthen the eccentric phase.</div>
+              </li>
+              <li class="progression-item" data-level="5">
+                <div class="progression-title">Band-Assisted Pull-ups</div>
+                <div class="progression-desc">Use resistance bands to complete full range pull-ups with assistance.</div>
+              </li>
+              <li class="progression-item" data-level="6">
+                <div class="progression-title">Chin-ups</div>
+                <div class="progression-desc">Underhand grip focusing on biceps and lats for complete upper body pull.</div>
+              </li>
+              <li class="progression-item" data-level="7">
+                <div class="progression-title">Pull-ups</div>
+                <div class="progression-desc">Overhand grip pulling chest to the bar with controlled movement.</div>
+              </li>
+              <li class="progression-item" data-level="8">
+                <div class="progression-title">Chest-to-Bar Pull-ups</div>
+                <div class="progression-desc">Increased range of motion and power development in the final phase.</div>
+              </li>
+              <li class="progression-item" data-level="9">
+                <div class="progression-title">Archer Pull-ups</div>
+                <div class="progression-desc">One arm leads the movement while the other provides minimal support.</div>
+              </li>
+              <li class="progression-item" data-level="10">
+                <div class="progression-title">One-Arm Pull-ups</div>
+                <div class="progression-desc">Elite pulling strength demonstration with full body control required.</div>
+              </li>
             </ul>
           </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Minimal Gear</h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              <strong>Pull-up Bar:</strong> Essential for upper-body pulling exercises like pull-ups, chin-ups, and muscle-ups. It builds upper-body strength and allows for progressions leading to advanced movements like muscle-ups.
-            </li>
-            <li>
-              <strong>Dip Bars or Parallel Bars:</strong> Crucial for developing pushing strength in the chest, shoulders, and triceps. Dips can be advanced with the addition of weight or ring variations.
-            </li>
-            <li>
-              <strong>Resistance Bands:</strong> Perfect for assisting with difficult movements like pull-ups and dips or providing resistance during mobility work to help improve flexibility and strength.
-            </li>
-            <li>
-              <strong>Ab Wheel:</strong> (Optional) A powerful tool for building core strength and stability, helping improve body control during various calisthenics movements.
-            </li>
-            <li>
-              <strong>Rings:</strong> For advanced skill work and stabilization, rings engage more muscle groups than bars due to their instability, allowing for advanced exercises like ring dips, muscle-ups, and front lever work.
-            </li>
-            <li>
-              <strong>Weighted Vest:</strong> (Optional) Adds resistance to bodyweight exercises to increase intensity and stimulate muscle growth.
-            </li>
-            <li>
-              <strong>Yoga Mat or Padded Surface:</strong> Important for floor work, ensuring comfort and safety during exercises like push-ups, planks, and core exercises.
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Daily Workouts</h2>
-          <p className="mb-4">Train daily with rotating focuses or combine skill + strength work each session:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li><strong>Skill + Strength Day:</strong> Practice a high-level move (e.g., handstand or front lever), then hit basics: pushups, dips, pullups, squats.</li>
-            <li><strong>Full Body:</strong> Circuit: Pullups, Pushups, Dips, Squats, Leg Raises x 3–5 rounds.</li>
-            <li><strong>Max Effort:</strong> One progression per move, taken to failure. 3 rounds.</li>
-            <li><strong>Explosive Day:</strong> Clapping pushups, jump squats, muscle-up drills, explosive dips.</li>
-            <li><strong>Recovery/Mobility:</strong> Light flow, bridges, stretches, and band mobility work.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Downloadable Programs</h2>
-          <p className="mb-4">Download the full workout PDFs for your personal use:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li><Link href="/downloads/bodyweight-mastery-pdf" className="text-blue-500 hover:underline">Full Body Program</Link></li>
-            <li><Link href="/downloads/bodyweight-mastery-skill-program-pdf" className="text-blue-500 hover:underline">Skill Progressions Program</Link></li>
-            <li><Link href="/downloads/bodyweight-mastery-strength-program-pdf" className="text-blue-500 hover:underline">Strength Program</Link></li>
-            <li><Link href="/downloads/bodyweight-mastery-explosive-program-pdf" className="text-blue-500 hover:underline">Explosive Program</Link></li>
-            <li><Link href="/downloads/bodyweight-mastery-recovery-program-pdf" className="text-blue-500 hover:underline">Recovery & Mobility Program</Link></li>
-          </ul>
-        </section>
-      </div>
-    </main>
-  );
-}
-
-// Helper function to capitalize the first letter of a string
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+        </div>
+        
+        <!-- Horizontal Pull -->
+        <div class="exercise-card">
+          <div class="exercise-header" onclick="toggleCard(this)">
+            <h3 class="exercise-title">Horizontal Pull</h3>
+            <i class="fas fa-chevron-down exercise-icon"></i>
+          </div>
+          <div class="exercise-content">
+            <ul class="progression-list">
+              <li class="progression-item" data-level="1">
+                <div class="progression-title">Scapular Rows</div>
+                <div class="progression-desc">Pull shoulder blades together on low surface to build back awareness.</div>
+              </li>
+              <li class="progression-item" data-level="2">
+                <div class="progression-title">Inverted Rows</div>
+                <div class="progression-desc">Pull chest to bar from horizontal position with full body alignment.</div>
+              </li>
+              <li class="progression-item" data-level="3">
+                <div class="progression-title">Towel Rows</div>
+                <div class="progression-desc">Increase grip challenge by using towels while performing rows.</div>
+              </li>
+              <li class="progression-item" data-level="4">
+                <div class="progression-title">Feet-Elevated Rows</div>
+                <div class="progression-desc">More bodyweight involved with elevated feet position for greater challenge.</div>
+              </li>
+              <li class="progression-item" data-level="5">
+                <div class="progression-title">Wide-Grip Rows</div>
+                <div class="progression-desc">Target rear delts and traps with wider hand positioning during rows.</div>
+              </li>
+              <li class="progression-item" data-level="6">
+                <div class="progression-title">Close-Grip Rows</div>
+                <div class="progression-desc">Emphasize biceps and mid-back with hands closer together during pull.</div>
+              </li>
+              <li class="progression-item" data-level="7">
+                <div class="progression-title">One-Arm Rows</div>
+                <div class="progression-desc">Isolate pulling strength on one side while maintaining body position.</div>
+              </li>
+              <li class="progression-item" data-level="8">
+                <div class="progression-title">Explosive Rows</div>
+                <div class="progression-desc">Add speed and power to the movement with controlled explosive phases.</div>
+              </li>
+              <li class="progression-item" data-level="9">
+                <div class="progression-title">Archer Rows</div>
+                <div class="progression-desc">One side leads the pulling motion while the other arm assists minimally.</div>
+              </li>
+              <li class="progression-item" data-level="10">
+                <div class="progression-title">One-Arm Inverted Rows</div>
+                <div class="progression-desc">Full-body control and raw power with single-arm horizontal pulling.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Vertical Push -->
+        <div class="exercise-card">
+          <div class="exercise-header" onclick="toggleCard(this)">
+            <h3 class="exercise-title">Vertical Push</h3>
+            <i class="fas fa-chevron-down exercise-icon"></i>
+          </div>
+          <div class="exercise-content">
+            <ul class="progression-list">
+              <li class="progression-item" data-level="1">
+                <div class="progression-title">Pike Push-ups</div>
+                <div class="progression-desc">Start with hips high and push downward to develop shoulder strength.</div>
+              </li>
+              <li class="progression-item" data-level="2">
+                <div class="progression-title">Elevated Pike Push-ups</div>
+                <div class="progression-desc">Feet elevated to shift more weight to shoulders and increase difficulty.</div>
+              </li>
+              <li class="progression-item" data-level="3">
+                <div class="progression-title">Wall Handstand Hold</div>
+                <div class="progression-desc">Kick into wall handstand and hold to build stability and strength.</div>
+              </li>
+              <li class="progression-item" data-level="4">
+                <div class="progression-title">Wall Handstand Push-ups</div>
+                <div class="progression-desc">Lower head to floor using arms while maintaining handstand position.</div>
+              </li>
+              <li class="progression-item" data-level="5">
+                <div class="progression-title">Partial Range HSPU</div>
+                <div class="progression-desc">Limit range of motion to build strength gradually for full movement.</div>
+              </li>
+              <li class="progression-item" data-level="6">
+                <div class="progression-title">Box Handstand Push-ups</div>
+                <div class="progression-desc">Legs on a box to simulate vertical push with more stability.</div>
+              </li>
+              <li class="progression-item" data-level="7">
+                <div class="progression-title">Full Handstand Push-ups</div>
+                <div class="progression-desc">Lower from full handstand to floor and press up with complete control.</div>
+              </li>
+              <li class="progression-item" data-level="8">
+                <div class="progression-title">Deficit HSPU</div>
+                <div class="progression-desc">Hands elevated on parallettes allowing deeper range of motion.</div>
+              </li>
+              <li class="progression-item" data-level="9">
+                <div class="progression-title">Tiger Bend Push-ups</div>
+                <div class="progression-desc">Advanced transition from forearms to handstand showing extreme control.</div>
+              </li>
+              <li class="progression-item" data-level="10">
+                <div class="progression-title">Freestanding HSPU</div>
+                <div class="progression-desc">No wall support, combining perfect balance with tremendous strength.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Horizontal Push -->
+        <div class="exercise-card">
+          <div class="exercise-header" onclick="toggleCard(this)">
+            <h3 class="exercise-title">Horizontal Push</h3>
+            <i class="fas fa-chevron-down exercise-icon"></i>
+          </div>
+          <div class="exercise-content">
+            <ul class="progression-list">
+              <li class="progression-item" data-level="1">
+                <div class="progression-title">Wall Push-ups</div>
+                <div class="progression-desc">Basic strength development from standing position against wall.</div>
+              </li>
+              <li class="progression-item" data-level="2">
+                <div class="progression-title">Knee Push-ups</div>
+                <div class="progression-desc">Beginner-friendly horizontal push with reduced bodyweight load.</div>
+              </li>
+              <li class="progression-item" data-level="3">
+                <div class="progression-title">Standard Push-ups</div>
+                <div class="progression-desc">Classic chest and triceps-dominant movement with full body tension.</div>
+              </li>
+              <li class="progression-item" data-level="4">
+                <div class="progression-title">Diamond Push-ups</div>
+                <div class="progression-desc">Triceps-focused close grip variation with hands forming diamond shape.</div>
+              </li>
+              <li class="progression-item" data-level="5">
+                <div class="progression-title">Wide Push-ups</div>
+                <div class="progression-desc">Chest and front shoulders emphasized with wider hand placement.</div>
+              </li>
+              <li class="progression-item" data-level="6">
+                <div class="progression-title">Explosive Push-ups</div>
+                <div class="progression-desc">Add speed and plyometric power to standard push-up movement.</div>
+              </li>
+              <li class="progression-item" data-level="7">
+                <div class="progression-title">Archer Push-ups</div>
+                <div class="progression-desc">One arm leads the movement while the other provides support.</div>
+              </li>
+              <li class="progression-item" data-level="8">
+                <div class="progression-title">Typewriter Push-ups</div>
+                <div class="progression-desc">Side-to-side horizontal movement control w

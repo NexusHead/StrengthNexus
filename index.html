@@ -28,8 +28,7 @@
     }
     nav {
       display: flex;
-      justify-content: center;
-      gap: 30px;
+      justify-content: space-between;
       padding: 20px 0;
       background-color: #111;
       font-size: 20px;
@@ -37,10 +36,14 @@
     nav a {
       color: crimson;
       text-decoration: none;
+      border: 2px solid crimson;
+      padding: 10px 20px;
       transition: 0.3s;
+      font-weight: bold;
     }
     nav a:hover {
       color: white;
+      background-color: crimson;
     }
     .section {
       border: 2px solid crimson;
@@ -59,6 +62,24 @@
       font-size: 20px;
       line-height: 1.6;
     }
+    .footer-nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 0;
+      background-color: #111;
+      font-size: 20px;
+    }
+    .footer-nav a {
+      color: crimson;
+      text-decoration: none;
+      border: 2px solid crimson;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    .footer-nav a:hover {
+      color: white;
+      background-color: crimson;
+    }
   </style>
 </head>
 <body>
@@ -73,8 +94,6 @@
     <a href="#bodyweight">Bodyweight Mastery</a>
     <a href="#hypertrophy">Hypertrophy</a>
     <a href="#endurance">Endurance</a>
-    <a href="#athleticism">Athleticism</a>
-    <a href="#coach">AI Coach</a>
   </nav>  <section id="bodyweight" class="section">
     <h2>Bodyweight Mastery</h2>
     <p>Progress from basic push-ups to elite-level planches and muscle-ups. Each step builds strength, skill, and control using your body as the weight.</p>
@@ -84,7 +103,10 @@
   </section>  <section id="endurance" class="section">
     <h2>Endurance</h2>
     <p>Master energy systems, aerobic capacity, and lactate threshold to push your limits longer and harder with structured endurance progression.</p>
-  </section>  <section id="athleticism" class="section">
+  </section>  <div class="footer-nav">
+    <a href="#athleticism">Athleticism</a>
+    <a href="#coach">AI Coach</a>
+  </div>  <section id="athleticism" class="section">
     <h2>Athleticism</h2>
     <p>Train to move explosively, react fast, and dominate your sport. Focused on speed, agility, coordination, and full-body control.</p>
   </section>  <section id="coach" class="section">

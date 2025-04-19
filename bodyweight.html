@@ -6,6 +6,7 @@
     <title>Strengthmind Bodyweight Mastery</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #000000;
@@ -24,6 +25,7 @@
             color: #ffffff;
         }
 
+        /* Tabs Styles */
         .tabs {
             display: flex;
             justify-content: center;
@@ -47,6 +49,7 @@
             background-color: #ff4d4d;
         }
 
+        /* Tab Content Styles */
         .tab-content {
             display: none;
             padding: 20px;
@@ -58,6 +61,7 @@
             display: block;
         }
 
+        /* Program Styles */
         .program {
             background-color: #222;
             margin: 20px;
@@ -86,6 +90,18 @@
             color: #ff6666;
             text-decoration: none;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tabs button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -93,12 +109,12 @@
     <h1>Strengthmind Bodyweight Mastery</h1>
     
     <div class="tabs">
-        <button onclick="showTab('vertical-pull')">Vertical Pull</button>
-        <button onclick="showTab('horizontal-pull')">Horizontal Pull</button>
-        <button onclick="showTab('vertical-push')">Vertical Push</button>
-        <button onclick="showTab('horizontal-push')">Horizontal Push</button>
-        <button onclick="showTab('core')">Core</button>
-        <button onclick="showTab('statics')">Statics</button>
+        <button aria-label="Show Vertical Pull Progressions" id="vertical-pull-btn">Vertical Pull</button>
+        <button aria-label="Show Horizontal Pull Progressions" id="horizontal-pull-btn">Horizontal Pull</button>
+        <button aria-label="Show Vertical Push Progressions" id="vertical-push-btn">Vertical Push</button>
+        <button aria-label="Show Horizontal Push Progressions" id="horizontal-push-btn">Horizontal Push</button>
+        <button aria-label="Show Core Progressions" id="core-btn">Core</button>
+        <button aria-label="Show Statics Progressions" id="statics-btn">Statics</button>
     </div>
 
     <!-- Tab Content -->
@@ -123,23 +139,23 @@
         </ul>
     </div>
 
-    <div id="vertical-push" class="tab-content">
+    <div id ="vertical-push" class="tab-content">
         <h2>Vertical Push Progressions</h2>
         <ul>
             <li>Incline Push-Ups: 3 sets x 10-15 reps</li>
-            <li>Pike Push-Ups: 3 sets x 5-10 reps</li>
-            <li>Handstand Push-Ups (against wall): 3 sets x 5-8 reps</li>
-            <li>Handstand Push-Ups (freestanding): 3 sets x 3-5 reps</li>
+            <li>Push-Ups: 3 sets x 8-12 reps</li>
+            <li>Handstand Push-Ups (against a wall): 3 sets x 3-5 reps</li>
+            <li>Archer Push-Ups: 3 sets x 5-8 reps</li>
         </ul>
     </div>
 
     <div id="horizontal-push" class="tab-content">
         <h2>Horizontal Push Progressions</h2>
         <ul>
-            <li>Push-Ups: 3 sets x 10-15 reps</li>
-            <li>Diamond Push-Ups: 3 sets x 8-12 reps</li>
-            <li>Archer Push-Ups: 3 sets x 8-12 reps</li>
-            <li>Decline Push-Ups: 3 sets x 10-12 reps</li>
+            <li>Incline Push-Ups: 3 sets x 10-15 reps</li>
+            <li>Push-Ups: 3 sets x 8-12 reps</li>
+            <li>Decline Push-Ups: 3 sets x 6-10 reps</li>
+            <li>Clap Push-Ups: 3 sets x 5-8 reps</li>
         </ul>
     </div>
 
@@ -147,95 +163,65 @@
         <h2>Core Progressions</h2>
         <ul>
             <li>Plank: 3 sets x 30-60 seconds</li>
-            <li>Leg Raises: 3 sets x 10 reps</li>
+            <li>Side Plank: 3 sets x 20-30 seconds each side</li>
+            <li>Hanging Leg Raises: 3 sets x 5-10 reps</li>
             <li>Dragon Flags: 3 sets x 3-5 reps</li>
-            <li>Hollow Body Hold: 3 sets x 20-30 seconds</li>
-            <li>Mountain Climbers: 3 sets x 30 seconds</li>
         </ul>
     </div>
 
     <div id="statics" class="tab-content">
         <h2>Statics Progressions</h2>
         <ul>
-            <li>Plank: 3 sets x 30-60 seconds</li>
             <li>Wall Sit: 3 sets x 30-60 seconds</li>
-            <li>Handstand Hold (against wall): 3 sets x 30-60 seconds</li>
-            <li>Front Lever Hold Progressions: 3 sets x 5-10 seconds</li>
-        </ul>
-    </div>
-
-    <!-- Programs -->
-    <div class="program">
-        <h3>Program 1: Beginner Strength and Mobility</h3>
-        <p>This program is designed for those just starting out with bodyweight training.</p>
-        <ul>
-            <li>Push-Ups: 3 sets x 10-12 reps</li>
-            <li>Bodyweight Squats: 3 sets x 12-15 reps</li>
-            <li>Plank: 3 sets x 30-45 seconds</li>
-            <li>Inverted Rows: 3 sets x 8-10 reps</li>
-            <li>Leg Raises: 3 sets x 10 reps</li>
+            <li>Planche Lean: 3 sets x 10-20 seconds</li>
+            <li>Front Lever Hold: 3 sets x 5-10 seconds</li>
+            <li>Back Lever Hold: 3 sets x 5-10 seconds</li>
         </ul>
     </div>
 
     <div class="program">
-        <h3>Program 2: Intermediate Strength and Hypertrophy</h3>
-        <p>This program is for those who are ready to progress to more advanced exercises.</p>
+        <h3>Gear Needed</h3>
+        <p>For the workouts, you will need:</p>
         <ul>
+            <li>Pull-Up Bar</li>
+            <li>Rings (optional)</li>
+            <li>Yoga Mat</li>
+            <li>Resistance Bands (optional)</li>
+        </ul>
+    </div>
+
+    <div class="program">
+        <h3>Programs of Varying Difficulty</h3>
+        <h4>Beginner Program</h4>
+        <ul>
+            <li>Assisted Pull-Ups: 3 sets x 8-10 reps</li>
             <li>Incline Push-Ups: 3 sets x 10-15 reps</li>
-            <li>Bulgarian Split Squats: 3 sets x 12-15 reps</li>
-            <li>Dragon Flags (Progressions): 3 sets x 5-8 reps</li>
-            <li>Ring Rows: 3 sets x 8-12 reps</li>
-            <li>Hollow Body Hold: 3 sets x 20-30 seconds</li>
+            <li>Plank: 3 sets x 30 seconds</li>
         </ul>
-    </div>
-
-    <div class="program">
-        <h3>Program 3: Advanced Strength and Power</h3>
-        <p>This program is for those who are looking to really push their limits and increase strength.</p>
+        <h4>Intermediate Program</h4>
         <ul>
-            <li>Handstand Push-Ups: 3 sets x 5-8 reps</li>
-            <li>Pistol Squats: 3 sets x 5-8 reps per leg</li>
-            <li>Muscle-Ups: 3 sets x 3-5 reps</li>
-            <li>Front Lever Progressions: 3 sets x 5-8 seconds hold</li>
-            <li>Archer Push-Ups: 3 sets x 8-12 reps</li>
-        </ul>
-    </div>
-
-    <div class="program">
-        <h3>Program 4: Bodyweight Endurance & Stamina</h3>
-        <p>This program is for those who want to focus on endurance, conditioning, and stamina.</p>
-        <ul>
-            <li>Push-Ups (Max Reps in 1 Minute)</li>
-            <li>Bodyweight Squats (Max Reps in 1 Minute)</li>
-            <li>Burpees: 3 sets x 15-20 reps</li>
-            <li>Mountain Climbers: 3 sets x 30 seconds</li>
-            <li>Plank: 3 sets x 60 seconds</li>
-        </ul>
-    </div>
-
-    <div class="program">
-        <h3>Program 5: Full Body Strength & Mobility</h3>
-        <p>This program integrates strength training with mobility work, ensuring balanced development.</p>
-        <ul>
+            <li>Pull-Ups: 3 sets x 5-10 reps</li>
             <li>Push-Ups: 3 sets x 8-12 reps</li>
-            <li>Squat to Lunge Transitions: 3 sets x 12 reps</li>
-            <li>Plank to Push-Up: 3 sets x 10-12 reps</li>
-            <li>Hip Flexor Stretch: 3 sets x 30 seconds per side</li>
-            <li>Shoulder Mobility Drills: 3 sets x 10 reps</li>
+            <li>Hanging Leg Raises: 3 sets x 5-10 reps</li>
+        </ul>
+        <h4>Advanced Program</h4>
+        <ul>
+            <li>Muscle-Up Progressions: 3 sets x 3-5 reps</li>
+            <li>Handstand Push-Ups: 3 sets x 3-5 reps</li>
+            <li>Dragon Flags: 3 sets x 3-5 reps</li>
         </ul>
     </div>
 
     <script>
-        function showTab(tabName) {
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => {
-                tab.classList.remove('active-tab');
+        const tabs = document.querySelectorAll('.tabs button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabContents.forEach(content => content.classList.remove('active-tab'));
+                document.getElementById(tab.id.replace('-btn', '')).classList.add('active-tab');
             });
-
-            var activeTab = document.getElementById(tabName);
-            activeTab.classList.add('active-tab');
-        }
+        });
     </script>
-
 </body>
 </html>

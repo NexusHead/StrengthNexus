@@ -200,53 +200,6 @@
             font-weight: 600;
         }
 
-        .category-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .category-section {
-            flex: 1 1 100%;
-            background-color: var(--section-bg);
-            border-left: 6px solid var(--primary-color);
-            padding: 2rem;
-            border-radius: var(--border-radius-md);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: transform var(--transition-speed);
-        }
-
-        .category-section:hover {
-            transform: translateY(-5px);
-        }
-
-        .quote {
-            font-style: italic;
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 1.3rem;
-            position: relative;
-        }
-
-        .quote::before, .quote::after {
-            content: '"';
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            position: absolute;
-            opacity: 0.5;
-        }
-
-        .quote::before {
-            top: 0.5rem;
-            left: 0;
-        }
-
-        .quote::after {
-            bottom: 0;
-            right: 0;
-        }
-
         .footer-content {
             display: flex;
             flex-direction: column;
@@ -255,50 +208,11 @@
             padding: 2rem 0;
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .social-link {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            transition: color var(--transition-speed);
-        }
-
-        .social-link:hover {
-            color: var(--primary-color);
-        }
-
         .copyright {
             font-size: 0.9rem;
             color: var(--text-muted);
             padding-top: 1.5rem;
             text-align: center;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.8rem 2rem;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: var(--border-radius-sm);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all var(--transition-speed);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-button:hover {
-            background-color: #a51329;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
         }
 
         @media (max-width: 768px) {
@@ -351,10 +265,19 @@
     </nav>
 
     <div class="section-container container">
+        <!-- Diagrams Section -->
+        <div class="diagrams">
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/b476/3a5b/-e1a/3-4dae-8b14-e3a905a82009/image.jpg" alt="Vertical Pull Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/6da0/7f0b/-d05/b-40fd-92ed-a26a454ff8a1/image.jpg" alt="Horizontal Pull Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/551a/13a4/-7fa/a-4719-a9ea-29c3a901ba5f/image.jpg" alt="Vertical Push Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/7fb3/ecd9/-104/4-495f-b220-1b1e671d7ebe/image.jpg" alt="Horizontal Push Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/44f5/3c58/-50d/8-472f-bbb4-ca2a5ae3ec19/image.jpg" alt="Core Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/6bc2/6bda/-9f7/3-4959-98a6-76e6c7838e80/image.jpg" alt="Statics Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+        </div>
+
         <!-- Tab Content -->
         <div id="vertical-pull" class="section tab-content">
             <h2>Vertical Pull Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/b476/3a5b/-e1a/3-4dae-8b14-e3a905a82009/image.jpg" alt="Vertical Pull Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
             <p>Vertical pull exercises focus on building strength and endurance in the back, biceps, and grip. These progressions will help you develop the necessary strength for advanced movements like one-arm pull-ups.</p>
             <ul>
                 <li><strong>Assisted Pull-Ups:</strong> Use resistance bands or a partner to assist you. Focus on full range of motion. Perform 3 sets x 8-10 reps.</li>
@@ -372,7 +295,6 @@
 
         <div id="horizontal-pull" class="section tab-content">
             <h2>Horizontal Pull Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/6da0/7f0b/-d05/b-40fd-92ed-a26a454ff8a1/image.jpg" alt="Horizontal Pull Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
             <p>Horizontal pull exercises target the back, rear delts, and biceps. These progressions will improve your pulling strength and posture.</p>
             <ul>
                 <li><strong>Inverted Rows:</strong> Perform rows with your body at an incline, feet on the ground. Perform 3 sets x 10-15 reps.</li>
@@ -390,7 +312,6 @@
 
         <div id="vertical-push" class="section tab-content">
             <h2>Vertical Push Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/551a/13a4/-7fa/a-4719-a9ea-29c3a901ba5f/image.jpg" alt="Vertical Push Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
             <p>Vertical push exercises focus on building strength in the shoulders, triceps, and chest. These progressions will help you develop the necessary strength for advanced movements like planche push-ups.</p>
             <ul>
                 <li><strong>Incline Push-Ups:</strong> Perform push-ups with your feet elevated. Focus on full range of motion. Perform 3 sets x 10-15 reps.</li>
@@ -408,7 +329,6 @@
 
         <div id="horizontal-push" class="section tab-content">
             <h2>Horizontal Push Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/7fb3/ecd9/-104/4-495f-b220-1b1e671d7ebe/image.jpg" alt="Horizontal Push Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
             <p>Horizontal push exercises target the chest, shoulders, and triceps. These progressions will improve your pushing strength and stability.</p>
             <ul>
                 <li><strong>Incline Push-Ups:</strong> Perform push-ups with your feet elevated. Focus on full range of motion. Perform 3 sets x 10-15 reps.</li>
@@ -426,7 +346,6 @@
 
         <div id="core" class="section tab-content">
             <h2>Core Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/44f5/3c58/-50d/8-472f-bbb4-ca2a5ae3ec19/image.jpg" alt="Core Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
             <p>Core exercises focus on building strength and endurance in the abdominals, lower back, and obliques. These progressions will improve your overall stability and control.</p>
             <ul>
                 <li><strong>Plank:</strong> Hold a static position with your body in a straight line. Perform 3 sets x 30-60 seconds.</li>
@@ -444,5 +363,32 @@
 
         <div id="statics" class="section tab-content">
             <h2>Statics Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/6bc2/6bda/-9f7/3-4959-98a6-76e6c7838e80/image.jpg" alt="Statics Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
-            <p>Static exercises focus on building isometric strength and control. These progressions will imp
+            <p>Static exercises focus on building isometric strength and control. These progressions will improve your overall body awareness and stability.</p>
+            <ul>
+                <li><strong>Wall Sit:</strong> Hold a static position with your back against a wall. Perform 3 sets x 30-60 seconds.</li>
+                <li><strong>Planche Lean:</strong> Lean forward with your arms extended, keeping your body straight. Perform 3 sets x 10-20 seconds.</li>
+                <li><strong>Tuck Planche:</strong> Hold a planche position with your knees tucked. Perform 3 sets x 10-20 seconds.</li>
+                <li><strong>Advanced Tuck Planche:</strong> Hold a planche position with your knees slightly extended. Perform 3 sets x 10-20 seconds.</li>
+                <li><strong>Straddle Planche:</strong> Hold a planche position with your legs straddled. Perform 3 sets x 10-20 seconds.</li>
+                <li><strong>Full Planche:</strong> Hold a planche position with your legs fully extended. Perform 3 sets x 5-10 seconds.</li>
+                <li><strong>Iron Cross:</strong> Hold a cross position with your arms extended. Perform 3 sets x 5-10 seconds.</li>
+            </ul>
+        </div>
+
+        <div class="section program">
+            <h3>Gear Needed</h3>
+            <p>For the workouts, you will need:</p>
+            <ul>
+                <li><strong>Pull-Up Bar:</strong> Essential for vertical pull exercises. It allows you to perform a variety of pull-up variations and hang exercises.</li>
+                <li><strong>Dip Bar:</strong> Useful for tricep dips and other bodyweight exercises that require parallel bars.</li>
+                <li><strong>Weight Belt:</strong> Useful for adding resistance to bodyweight exercises like pull-ups and dips.</li>
+                <li><strong>Resistance Bands:</strong> Useful for assisted exercises, warm-ups, and adding resistance to bodyweight movements.</li>
+                <li><strong>Parallettes:</strong> Allows for a greater range of motion in exercises like L-sits and planche holds, improving wrist and shoulder strength.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="container">
+        <div class="footer-content">
+            <div class="copyright">
+        

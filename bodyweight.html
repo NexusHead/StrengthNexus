@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strengthmind Bodyweight Mastery</title>
+    <title>Strengthmind Comprehensive Training</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -117,7 +117,7 @@
             font-size: 1.2rem;
             transition: all var(--transition-speed);
             text-align: center;
-            flex: 1 1 calc(33.333% - 1rem);
+            flex: 1 1 calc(25% - 1rem);
             min-width: 160px;
             position: relative;
             overflow: hidden;
@@ -200,6 +200,20 @@
             font-weight: 600;
         }
 
+        .exercise-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .exercise-item {
+            flex: 1 1 calc(33.333% - 1rem);
+            background-color: var(--nav-bg);
+            border: 1px solid var(--primary-color);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+        }
+
         .footer-content {
             display: flex;
             flex-direction: column;
@@ -251,138 +265,189 @@
     <header>
         <div class="container">
             <h1 class="title"><span>Strength</span><span>Mind</span></h1>
-            <div class="tagline">Bodyweight Mastery</div>
+            <div class="tagline">Comprehensive Training</div>
         </div>
     </header>
 
     <nav class="container">
-        <div class="nav-link" id="vertical-pull-btn"><span>Vertical Pull</span></div>
-        <div class="nav-link" id="horizontal-pull-btn"><span>Horizontal Pull</span></div>
-        <div class="nav-link" id="vertical-push-btn"><span>Vertical Push</span></div>
-        <div class="nav-link" id="horizontal-push-btn"><span>Horizontal Push</span></div>
-        <div class="nav-link" id="core-btn"><span>Core</span></div>
+        <div class="nav-link" id="pulling-btn"><span>Pulling</span></div>
+        <div class="nav-link" id="pushing-btn"><span>Pushing</span></div>
+        <div class="nav-link" id="legs-btn"><span>Legs</span></div>
         <div class="nav-link" id="statics-btn"><span>Statics</span></div>
     </nav>
 
     <div class="section-container container">
-        <!-- Vertical Pull Section -->
-        <div id="vertical-pull-section" class="section tab-content">
-            <h2>Vertical Pull Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/b476/3a5b/-e1a/3-4dae-8b14-e3a905a82009/image.jpg" alt="Vertical Pull Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
-            <p>Vertical pull exercises focus on building strength and endurance in the back, biceps, and grip. These progressions will help you develop the necessary strength for advanced movements like one-arm pull-ups.</p>
-            <ul>
-                <li><strong>Assisted Pull-Ups:</strong> Use resistance bands or a partner to assist you. Focus on full range of motion. Perform 3 sets x 8-10 reps.</li>
-                <li><strong>Negative Pull-Ups:</strong> Jump to the top position and slowly lower yourself. Focus on the eccentric phase. Perform 3 sets x 5 reps.</li>
-                <li><strong>Pull-Ups:</strong> Master the full range of motion with an overhand grip. Perform 3 sets x 5-10 reps.</li>
-                <li><strong>Chin-Ups:</strong> Similar to pull-ups but with a supinated (underhand) grip. Perform 3 sets x 5-10 reps.</li>
-                <li><strong>Close-Grip Pull-Ups:</strong> Perform pull-ups with a narrow grip to target different muscle groups. Perform 3 sets x 6-8 reps.</li>
-                <li><strong>Wide-Grip Pull-Ups:</strong> Use a wide grip to focus more on the lats. Perform 3 sets x 6-8 reps.</li>
-                <li><strong>L-Sit Pull-Ups:</strong> Perform pull-ups while maintaining an L-sit position. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>Archer Pull-Ups:</strong> Pull with one arm while extending the other. Perform 3 sets x 5-7 reps per arm.</li>
-                <li><strong>Typewriter Pull-Ups:</strong> Move horizontally across the bar while maintaining a pull-up position. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>One-Arm Pull-Ups:</strong> The ultimate test of pulling strength. Perform 3 sets x 1-3 reps per arm.</li>
-            </ul>
+        <!-- Pulling Section -->
+        <div id="pulling-section" class="section tab-content">
+            <h2>Pulling: The Pillar of Bodyweight Calisthenics</h2>
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/b476/3a5b/-e1a/3-4dae-8b14-e3a905a82009/image.jpg" alt="Pulling Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+            <p>Pulling exercises are fundamental to bodyweight training, focusing on building strength in the back, biceps, and grip. These exercises are essential for developing the foundation needed for advanced calisthenics movements.</p>
+
+            <h3>Exercises</h3>
+            <div class="exercise-list">
+                <div class="exercise-item">
+                    <h4>Beginner</h4>
+                    <ul>
+                        <li><strong>Assisted Pull-Ups:</strong> Use resistance bands or a partner to assist you. Focus on full range of motion.</li>
+                        <li><strong>Negative Pull-Ups:</strong> Jump to the top position and slowly lower yourself. Focus on the eccentric phase.</li>
+                        <li><strong>Inverted Rows:</strong> Perform rows with your body at an incline, feet on the ground.</li>
+                        <li><strong>Australian Pull-Ups:</strong> Perform rows with your body horizontal, feet elevated.</li>
+                        <li><strong>Scapular Pull-Ups:</strong> Focus on engaging the scapula without bending the elbows.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Intermediate</h4>
+                    <ul>
+                        <li><strong>Pull-Ups:</strong> Master the full range of motion with an overhand grip.</li>
+                        <li><strong>Chin-Ups:</strong> Similar to pull-ups but with a supinated (underhand) grip.</li>
+                        <li><strong>Close-Grip Pull-Ups:</strong> Perform pull-ups with a narrow grip to target different muscle groups.</li>
+                        <li><strong>Wide-Grip Pull-Ups:</strong> Use a wide grip to focus more on the lats.</li>
+                        <li><strong>L-Sit Pull-Ups:</strong> Perform pull-ups while maintaining an L-sit position.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Advanced</h4>
+                    <ul>
+                        <li><strong>Archer Pull-Ups:</strong> Pull with one arm while extending the other.</li>
+                        <li><strong>Typewriter Pull-Ups:</strong> Move horizontally across the bar while maintaining a pull-up position.</li>
+                        <li><strong>Muscle-Ups:</strong> Transition from a pull-up to a dip.</li>
+                        <li><strong>Front Lever Rows:</strong> Perform rows while maintaining a front lever position.</li>
+                        <li><strong>One-Arm Pull-Ups:</strong> The ultimate test of pulling strength.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Incredibly Advanced</h4>
+                    <ul>
+                        <li><strong>Ice Cream Makers:</strong> Hang from the bar and rotate your body around it.</li>
+                        <li><strong>Front Lever Pull-Ups:</strong> Perform pull-ups from a front lever position.</li>
+                        <li><strong>No-Hands Muscle-Ups:</strong> Transition from a pull-up to a dip without using hands.</li>
+                        <li><strong>Weighted Pull-Ups:</strong> Perform pull-ups with added weight.</li>
+                        <li><strong>One-Arm Front Lever Pull-Ups:</strong> Advanced front lever pull-ups with one arm.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Champion</h4>
+                    <ul>
+                        <li><strong>1.5-2x Bodyweight Weighted Pull-Ups:</strong> Perform pull-ups with significant added weight.</li>
+                        <li><strong>One-Arm Muscle-Ups:</strong> Transition from a one-arm pull-up to a dip.</li>
+                        <li><strong>Dynamic Front Lever Rows:</strong> Perform dynamic rows while maintaining a front lever position.</li>
+                        <li><strong>Full Planche Muscle-Ups:</strong> Transition from a planche position to a dip.</li>
+                        <li><strong>Explosive Muscle-Ups:</strong> Perform muscle-ups with explosive speed and power.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <!-- Horizontal Pull Section -->
-        <div id="horizontal-pull-section" class="section tab-content">
-            <h2>Horizontal Pull Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/6da0/7f0b/-d05/b-40fd-92ed-a26a454ff8a1/image.jpg" alt="Horizontal Pull Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
-            <p>Horizontal pull exercises target the back, rear delts, and biceps. These progressions will improve your pulling strength and posture.</p>
-            <ul>
-                <li><strong>Inverted Rows:</strong> Perform rows with your body at an incline, feet on the ground. Perform 3 sets x 10-15 reps.</li>
-                <li><strong>Feet-Elevated Inverted Rows:</strong> Increase the difficulty by elevating your feet. Perform 3 sets x 8-12 reps.</li>
-                <li><strong>Ring Rows:</strong> Use gymnastic rings to add instability. Perform 3 sets x 8-12 reps.</li>
-                <li><strong>One-Arm Rows:</strong> Focus on unilateral strength using a single ring or towel. Perform 3 sets x 6-8 reps per arm.</li>
-                <li><strong>Australian Pull-Ups:</strong> Perform rows with your body horizontal, feet elevated. Perform 3 sets x 12-15 reps.</li>
-                <li><strong>Archer Rows:</strong> Pull with one arm while extending the other. Perform 3 sets x 6-8 reps per arm.</li>
-                <li><strong>Typewriter Rows:</strong> Move horizontally across the bar while maintaining a row position. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>Front Lever Rows:</strong> Perform rows while maintaining a front lever position. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>Rear-Delt Flyes with Rings:</strong> Focus on the rear delts by externally rotating the arms. Perform 3 sets x 8-10 reps.</li>
-                <li><strong>Front Lever Pull-Ups:</strong> Perform pull-ups from a front lever position. Perform 3 sets x 3-5 reps.</li>
-            </ul>
+        <!-- Pushing Section -->
+        <div id="pushing-section" class="section tab-content">
+            <h2>Pushing: Foundational Strength</h2>
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/551a/13a4/-7fa/a-4719-a9ea-29c3a901ba5f/image.jpg" alt="Pushing Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+            <p>Pushing exercises are crucial for developing upper body strength, focusing on the chest, shoulders, and triceps. These exercises are essential for balance and functional strength.</p>
+
+            <h3>Exercises</h3>
+            <div class="exercise-list">
+                <div class="exercise-item">
+                    <h4>Beginner</h4>
+                    <ul>
+                        <li><strong>Incline Push-Ups:</strong> Perform push-ups with your feet elevated.</li>
+                        <li><strong>Knee Push-Ups:</strong> Perform push-ups from your knees.</li>
+                        <li><strong>Wall Push-Ups:</strong> Perform push-ups against a wall.</li>
+                        <li><strong>Bench Dips:</strong> Perform dips with your feet on the ground.</li>
+                        <li><strong>Close-Grip Push-Ups:</strong> Perform push-ups with a narrow grip.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Intermediate</h4>
+                    <ul>
+                        <li><strong>Push-Ups:</strong> Master the full range of motion with a standard grip.</li>
+                        <li><strong>Dips:</strong> Perform dips on parallel bars.</li>
+                        <li><strong>Decline Push-Ups:</strong> Elevate your feet higher than your hands.</li>
+                        <li><strong>Diamond Push-Ups:</strong> Perform push-ups with your hands close together.</li>
+                        <li><strong>Hindu Push-Ups:</strong> Perform push-ups with a dynamic, flowing motion.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Advanced</h4>
+                    <ul>
+                        <li><strong>Handstand Push-Ups:</strong> Perform push-ups in a handstand position against a wall.</li>
+                        <li><strong>Ring Dips:</strong> Perform dips on gymnastic rings for added instability.</li>
+                        <li><strong>Pseudo Planche Push-Ups:</strong> Perform push-ups with your hands low and leaning forward.</li>
+                        <li><strong>Archer Push-Ups:</strong> Focus on unilateral strength by extending one arm.</li>
+                        <li><strong>Clap Push-Ups:</strong> Explode up and clap your hands together.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Incredibly Advanced</h4>
+                    <ul>
+                        <li><strong>Planche Push-Ups:</strong> Perform push-ups in a planche position.</li>
+                        <li><strong>90-Degree Push-Ups:</strong> Perform push-ups with your body at a 90-degree angle.</li>
+                        <li><strong>One-Arm Push-Ups:</strong> Perform push-ups with one arm.</li>
+                        <li><strong>Weighted Dips:</strong> Perform dips with added weight.</li>
+                        <li><strong>Full Planche Dips:</strong> Perform dips in a full planche position.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Champion</h4>
+                    <ul>
+                        <li><strong>2x Bodyweight Weighted Dips:</strong> Perform dips with double your body weight.</li>
+                        <li><strong>One-Arm Planche Push-Ups:</strong> Perform push-ups in a planche position with one arm.</li>
+                        <li><strong>Dynamic Planche Push-Ups:</strong> Perform dynamic push-ups in a planche position.</li>
+                        <li><strong>Explosive 90-Degree Push-Ups:</strong> Perform explosive push-ups at a 90-degree angle.</li>
+                        <li><strong>Full Planche to Handstand Push-Ups:</strong> Transition from a planche to a handstand push-up.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <!-- Vertical Push Section -->
-        <div id="vertical-push-section" class="section tab-content">
-            <h2>Vertical Push Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/551a/13a4/-7fa/a-4719-a9ea-29c3a901ba5f/image.jpg" alt="Vertical Push Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
-            <p>Vertical push exercises focus on building strength in the shoulders, triceps, and chest. These progressions will help you develop the necessary strength for advanced movements like planche push-ups.</p>
-            <ul>
-                <li><strong>Incline Push-Ups:</strong> Perform push-ups with your feet elevated. Focus on full range of motion. Perform 3 sets x 10-15 reps.</li>
-                <li><strong>Push-Ups:</strong> Master the full range of motion with a standard grip. Perform 3 sets x 8-12 reps.</li>
-                <li><strong>Diamond Push-Ups:</strong> Perform push-ups with your hands close together. Perform 3 sets x 6-10 reps.</li>
-                <li><strong>Decline Push-Ups:</strong> Elevate your feet higher than your hands. Perform 3 sets x 6-10 reps.</li>
-                <li><strong>Pike Push-Ups:</strong> Keep your feet elevated and body in a pike position. Perform 3 sets x 5-8 reps.</li>
-                <li><strong>Handstand Push-Ups (against a wall):</strong> Work on the full range of motion. Perform 3 sets x 3-5 reps.</li>
-                <li><strong>Archer Push-Ups:</strong> Focus on unilateral strength by extending one arm. Perform 3 sets x 5-8 reps per arm.</li>
-                <li><strong>Pseudo Planche Push-Ups:</strong> Keep your hands low and lean forward. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>Tiger-Bend Push-Ups:</strong> Bend your arms in a tiger-bend position. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>Planche Push-Ups:</strong> The ultimate test of horizontal pushing strength. Perform 3 sets x 1-3 reps.</li>
-            </ul>
-        </div>
+        <!-- Legs Section -->
+        <div id="legs-section" class="section tab-content">
+            <h2>Legs: Power and Endurance</h2>
+            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/44f5/3c58/-50d/8-472f-bbb4-ca2a5ae3ec19/image.jpg" alt="Legs Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
+            <p>Leg exercises are vital for overall strength and endurance. They focus on building power in the quadriceps, hamstrings, and calves, essential for functional movement and athletic performance.</p>
 
-        <!-- Horizontal Push Section -->
-        <div id="horizontal-push-section" class="section tab-content">
-            <h2>Horizontal Push Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/7fb3/ecd9/-104/4-495f-b220-1b1e671d7ebe/image.jpg" alt="Horizontal Push Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
-            <p>Horizontal push exercises target the chest, shoulders, and triceps. These progressions will improve your pushing strength and stability.</p>
-            <ul>
-                <li><strong>Incline Push-Ups:</strong> Perform push-ups with your feet elevated. Focus on full range of motion. Perform 3 sets x 10-15 reps.</li>
-                <li><strong>Push-Ups:</strong> Master the full range of motion with a standard grip. Perform 3 sets x 8-12 reps.</li>
-                <li><strong>Wide-Grip Push-Ups:</strong> Perform push-ups with a wide grip to target the chest. Perform 3 sets x 6-10 reps.</li>
-                <li><strong>Decline Push-Ups:</strong> Elevate your feet higher than your hands. Perform 3 sets x 6-10 reps.</li>
-                <li><strong>Clap Push-Ups:</strong> Explode up and clap your hands together. Perform 3 sets x 5-8 reps.</li>
-                <li><strong>Divebomber Push-Ups:</strong> Perform a dynamic push-up with a swooping motion. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>Pseudo Planche Push-Ups:</strong> Keep your hands low and lean forward. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>Maltese Push-Ups:</strong> Perform push-ups with your arms externally rotated. Perform 3 sets x 5-7 reps.</li>
-                <li><strong>One-Arm Push-Ups:</strong> Focus on unilateral strength. Perform 3 sets x 3-5 reps per arm.</li>
-                <li><strong>Freestanding 90-Degree Handstand Push-Ups:</strong> The ultimate test of vertical pushing strength. Perform 3 sets x 1-3 reps.</li>
-            </ul>
-        </div>
-
-        <!-- Core Section -->
-        <div id="core-section" class="section tab-content">
-            <h2>Core Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/44f5/3c58/-50d/8-472f-bbb4-ca2a5ae3ec19/image.jpg" alt="Core Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
-            <p>Core exercises focus on building strength and endurance in the abdominals, lower back, and obliques. These progressions will improve your overall stability and control.</p>
-            <ul>
-                <li><strong>Plank:</strong> Hold a static position with your body in a straight line. Perform 3 sets x 30-60 seconds.</li>
-                <li><strong>Side Plank:</strong> Hold a static position on each side. Perform 3 sets x 20-30 seconds each side.</li>
-                <li><strong>Reverse Plank:</strong> Hold a static position facing upwards. Perform 3 sets x 20-30 seconds.</li>
-                <li><strong>Bicycle Crunches:</strong> Perform a bicycle motion with your legs while crunching. Perform 3 sets x 15-20 reps per side.</li>
-                <li><strong>Leg Raises:</strong> Lie on your back and raise your legs. Perform 3 sets x 10-15 reps.</li>
-                <li><strong>Hanging Leg Raises:</strong> Hang from a bar and raise your legs. Perform 3 sets x 5-10 reps.</li>
-                <li><strong>Russian Twists:</strong> Rotate your torso while holding a weight or medicine ball. Perform 3 sets x 15-20 reps per side.</li>
-                <li><strong>Dragon Flags:</strong> Lie on your back and raise your body while keeping it straight. Perform 3 sets x 3-5 reps.</li>
-                <li><strong>Windshield Wipers:</strong> Lie on your back and rotate your legs side to side. Perform 3 sets x 10-15 reps per side.</li>
-                <li><strong>Front Lever and Full Planche:</strong> Choose one advanced static hold to master. Perform 3 sets x 5-10 seconds.</li>
-            </ul>
-        </div>
-
-        <!-- Statics Section -->
-        <div id="statics-section" class="section tab-content">
-            <h2>Statics Progressions</h2>
-            <img src="https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/6bc2/6bda/-9f7/3-4959-98a6-76e6c7838e80/image.jpg" alt="Statics Diagram" style="width: 100%; border-radius: var(--border-radius-md); margin-bottom: 1rem;">
-            <p>Static exercises focus on building isometric strength and control. These progressions will improve your overall body awareness and stability.</p>
-            <ul>
-                <li><strong>Wall Sit:</strong> Hold a static position with your back against a wall. Perform 3 sets x 30-60 seconds.</li>
-                <li><strong>Planche Lean:</strong> Lean forward with your arms extended, keeping your body straight. Perform 3 sets x 10-20 seconds.</li>
-                <li><strong>Tuck Planche:</strong> Hold a planche position with your knees tucked. Perform 3 sets x 10-20 seconds.</li>
-                <li><strong>Advanced Tuck Planche:</strong> Hold a planche position with your knees slightly extended. Perform 3 sets x 10-20 seconds.</li>
-                <li><strong>Straddle Planche:</strong> Hold a planche position with your legs straddled. Perform 3 sets x 10-20 seconds.</li>
-                <li><strong>Full Planche:</strong> Hold a planche position with your legs fully extended. Perform 3 sets x 5-10 seconds.</li>
-                <li><strong>Iron Cross:</strong> Hold a cross position with your arms extended. Perform 3 sets x 5-10 seconds.</li>
-            </ul>
-        </div>
-
-        <!-- Gear Needed Section -->
-        <div class="section program">
-            <h3>Gear Needed</h3>
-            <p>For the workouts, you will need:</p>
-            <ul>
-                <li><strong>Pull-Up Bar:</strong> Essential for vertical pull exercises. It allows you to perform a variety of pull-up variations and hang exercises.</li>
-                <li><strong>Dip Bar:</strong> Useful for tricep dips and other bodyweight exercises that require parallel bars.</li>
-                <li><strong>Weight Belt:</strong> Useful for adding resistance to bodyweight exercises like pull-ups and dips.</li>
-                <li><strong>Resistance Bands:</strong> Useful for assisted exercises, warm-ups, and adding resistance to bodyweight movements.</li>
-                <li><strong>Parallettes:</strong> Allows for a greater range of motion in exercises like L-sits and planche holds, imp
+            <h3>Exercises</h3>
+            <div class="exercise-list">
+                <div class="exercise-item">
+                    <h4>Beginner</h4>
+                    <ul>
+                        <li><strong>Bodyweight Squats:</strong> Perform squats using only your body weight.</li>
+                        <li><strong>Lunges:</strong> Perform lunges to target each leg individually.</li>
+                        <li><strong>Step-Ups:</strong> Step up onto a raised platform.</li>
+                        <li><strong>Glute Bridges:</strong> Lie on your back and lift your hips.</li>
+                        <li><strong>Calf Raises:</strong> Stand on the edge of a step and raise your heels.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Intermediate</h4>
+                    <ul>
+                        <li><strong>Jump Squats:</strong> Perform squats with a jump at the top.</li>
+                        <li><strong>Walking Lunges:</strong> Perform lunges while walking forward.</li>
+                        <li><strong>Bulgarian Split Squats:</strong> Perform single-leg squats with the rear foot elevated.</li>
+                        <li><strong>Pistol Squats:</strong> Perform single-leg squats with the non-working leg extended.</li>
+                        <li><strong>Donkey Kicks:</strong> Kick your legs back while in a push-up position.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Advanced</h4>
+                    <ul>
+                        <li><strong>Box Jumps:</strong> Jump onto a raised platform.</li>
+                        <li><strong>Single-Leg Box Jumps:</strong> Jump onto a raised platform using one leg.</li>
+                        <li><strong>Depth Jumps:</strong> Jump down from a raised platform and immediately jump up.</li>
+                        <li><strong>Shrimp Squats:</strong> Perform squats while holding your feet.</li>
+                        <li><strong>Dragon Pistol Squats:</strong> Perform pistol squats with a dynamic, flowing motion.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Incredibly Advanced</h4>
+                    <ul>
+                        <li><strong>Weighted Pistol Squats:</strong> Perform pistol squats with added weight.</li>
+                        <li><strong>Double Front Flips:</strong> Perform a double front flip from a standing position.</li>
+                        <li><strong>Backflip Burpees:</strong> Perform a backflip as part of a burpee.</li>
+                        <li><strong>Triple Jumps:</strong> Perform three consecutive jumps in quick succession.</li>
+                        <li><strong>Full-Range Shrimp Squats:</strong> Perform shrimp squats with a full range of motion.</li>
+                    </ul>
+                </div>
+                <div class="exercise-item">
+                    <h4>Champion</h4>
+                    <ul>
+   

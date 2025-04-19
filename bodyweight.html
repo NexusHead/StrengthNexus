@@ -3,300 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodyweight Mastery & Calisthenics Programs</title>
+    <title>Strengthmind Bodyweight Mastery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
+            background-color: #000000;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
 
-        h1, h2 {
-            color: #2c3e50;
+        h1, h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: crimson;
+            text-align: center;
         }
 
-        h3 {
-            color: #2980b9;
+        h2 {
+            color: #ffffff;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-
-        /* Tab styles */
         .tabs {
             display: flex;
-            justify-content: space-around;
-            cursor: pointer;
-            background-color: #2980b9;
+            justify-content: center;
+            background-color: #333;
             padding: 10px;
-            border-radius: 8px 8px 0 0;
+        }
+
+        .tabs button {
+            background-color: crimson;
             color: white;
+            border: none;
+            padding: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            transition: background-color 0.3s;
         }
 
-        .tab {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .tab:hover {
-            background-color: #3498db;
+        .tabs button:hover {
+            background-color: #ff4d4d;
         }
 
         .tab-content {
             display: none;
-            margin-top: 20px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: white;
         }
 
         .active-tab {
             display: block;
         }
 
-        .tab-content ul {
-            padding-left: 20px;
-        }
-
-        /* Gear styles */
-        .gear-item {
-            background: #ecf0f1;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .gear-item h4 {
-            margin-top: 0;
-        }
-
         .program {
-            background: #fff;
+            background-color: #222;
+            margin: 20px;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+        .program ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .program li {
+            margin-bottom: 10px;
+        }
+
+        .program h3 {
+            color: crimson;
+        }
+
+        .program p {
+            color: white;
+        }
+
+        .program li a {
+            color: #ff6666;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bodyweight Mastery & Calisthenics Programs</h1>
-        <p>Master bodyweight training with a minimalistic approach. No equipment, no excuses. Just results.</p>
 
-        <!-- Tabs Section -->
-        <div class="tabs">
-            <div class="tab" onclick="showTab('vertical-pull')">Vertical Pull</div>
-            <div class="tab" onclick="showTab('horizontal-pull')">Horizontal Pull</div>
-            <div class="tab" onclick="showTab('vertical-push')">Vertical Push</div>
-            <div class="tab" onclick="showTab('horizontal-push')">Horizontal Push</div>
-            <div class="tab" onclick="showTab('core')">Core</div>
-            <div class="tab" onclick="showTab('statics')">Statics</div>
-        </div>
+    <h1>Strengthmind Bodyweight Mastery</h1>
+    
+    <div class="tabs">
+        <button onclick="showTab('vertical-pull')">Vertical Pull</button>
+        <button onclick="showTab('horizontal-pull')">Horizontal Pull</button>
+        <button onclick="showTab('vertical-push')">Vertical Push</button>
+        <button onclick="showTab('horizontal-push')">Horizontal Push</button>
+        <button onclick="showTab('core')">Core</button>
+        <button onclick="showTab('statics')">Statics</button>
+    </div>
 
-        <!-- Tab Content -->
-        <div id="vertical-pull" class="tab-content">
-            <h2>Vertical Pull Exercise Progressions</h2>
-            <ul>
-                <li>1. Assisted Pull-Up</li>
-                <li>2. Negative Pull-Up</li>
-                <li>3. Jumping Pull-Up</li>
-                <li>4. Band Assisted Pull-Up</li>
-                <li>5. Pull-Up (Standard)</li>
-                <li>6. Weighted Pull-Up</li>
-                <li>7. Archer Pull-Up</li>
-                <li>8. Muscle-Up Progression</li>
-                <li>9. Front Lever Progression</li>
-                <li>10. Full Front Lever</li>
-            </ul>
-        </div>
+    <!-- Tab Content -->
+    <div id="vertical-pull" class="tab-content">
+        <h2>Vertical Pull Progressions</h2>
+        <ul>
+            <li>Assisted Pull-Ups: 3 sets x 8-10 reps</li>
+            <li>Negative Pull-Ups: 3 sets x 5 reps</li>
+            <li>Pull-Ups: 3 sets x 5-10 reps</li>
+            <li>Chin-Ups: 3 sets x 5-10 reps</li>
+            <li>Muscle-Up Progressions: 3 sets x 3-5 reps</li>
+        </ul>
+    </div>
 
-        <div id="horizontal-pull" class="tab-content">
-            <h2>Horizontal Pull Exercise Progressions</h2>
-            <ul>
-                <li>1. Inverted Row (Feet on Ground)</li>
-                <li>2. Inverted Row (Feet Elevated)</li>
-                <li>3. Ring Rows</li>
-                <li>4. Single-Arm Inverted Row</li>
-                <li>5. T-Bar Row (Bodyweight)</li>
-                <li>6. Bent-Over Rows (Bodyweight)</li>
-                <li>7. Renegade Rows</li>
-                <li>8. Pull-Ups (Wide Grip)</li>
-                <li>9. Muscle-Up Progression</li>
-                <li>10. One-Arm Row Progression</li>
-            </ul>
-        </div>
+    <div id="horizontal-pull" class="tab-content">
+        <h2>Horizontal Pull Progressions</h2>
+        <ul>
+            <li>Inverted Rows: 3 sets x 10-15 reps</li>
+            <li>Ring Rows: 3 sets x 8-12 reps</li>
+            <li>One-Arm Rows: 3 sets x 6-8 reps</li>
+            <li>Australian Pull-Ups: 3 sets x 12-15 reps</li>
+        </ul>
+    </div>
 
-        <div id="vertical-push" class="tab-content">
-            <h2>Vertical Push Exercise Progressions</h2>
-            <ul>
-                <li>1. Wall Push-Up</li>
-                <li>2. Incline Push-Up</li>
-                <li>3. Standard Push-Up</li>
-                <li>4. Decline Push-Up</li>
-                <li>5. Handstand Push-Up (Wall Supported)</li>
-                <li>6. Handstand Push-Up (Freestanding)</li>
-                <li>7. Pike Push-Up</li>
-                <li>8. Planche Lean</li>
-                <li>9. Full Planche</li>
-                <li>10. Planche Push-Up</li>
-            </ul>
-        </div>
+    <div id="vertical-push" class="tab-content">
+        <h2>Vertical Push Progressions</h2>
+        <ul>
+            <li>Incline Push-Ups: 3 sets x 10-15 reps</li>
+            <li>Pike Push-Ups: 3 sets x 5-10 reps</li>
+            <li>Handstand Push-Ups (against wall): 3 sets x 5-8 reps</li>
+            <li>Handstand Push-Ups (freestanding): 3 sets x 3-5 reps</li>
+        </ul>
+    </div>
 
-        <div id="horizontal-push" class="tab-content">
-            <h2>Horizontal Push Exercise Progressions</h2>
-            <ul>
-                <li>1. Wall Push-Up</li>
-                <li>2. Standard Push-Up</li>
-                <li>3. Diamond Push-Up</li>
-                <li>4. Wide Push-Up</li>
-                <li>5. Incline Push-Up</li>
-                <li>6. Decline Push-Up</li>
-                <li>7. Archer Push-Up</li>
-                <li>8. Spiderman Push-Up</li>
-                <li>9. One-Handed Push-Up</li>
-                <li>10. Clap Push-Up</li>
-            </ul>
-        </div>
+    <div id="horizontal-push" class="tab-content">
+        <h2>Horizontal Push Progressions</h2>
+        <ul>
+            <li>Push-Ups: 3 sets x 10-15 reps</li>
+            <li>Diamond Push-Ups: 3 sets x 8-12 reps</li>
+            <li>Archer Push-Ups: 3 sets x 8-12 reps</li>
+            <li>Decline Push-Ups: 3 sets x 10-12 reps</li>
+        </ul>
+    </div>
 
-        <div id="core" class="tab-content">
-            <h2>Core Exercise Progressions</h2>
-            <ul>
-                <li>1. Plank</li>
-                <li>2. Side Plank</li>
-                <li>3. Hollow Body Hold</li>
-                <li>4. Leg Raises</li>
-                <li>5. Russian Twists</li>
-                <li>6. L-Sit</li>
-                <li>7. V-Ups</li>
-                <li>8. Dragon Flags</li>
-                <li>9. Hanging Leg Raises</li>
-                <li>10. Ab Wheel Rollouts</li>
-            </ul>
-        </div>
+    <div id="core" class="tab-content">
+        <h2>Core Progressions</h2>
+        <ul>
+            <li>Plank: 3 sets x 30-60 seconds</li>
+            <li>Leg Raises: 3 sets x 10 reps</li>
+            <li>Dragon Flags: 3 sets x 3-5 reps</li>
+            <li>Hollow Body Hold: 3 sets x 20-30 seconds</li>
+            <li>Mountain Climbers: 3 sets x 30 seconds</li>
+        </ul>
+    </div>
 
-        <div id="statics" class="tab-content">
-            <h2>Statics Exercise Progressions</h2>
-            <ul>
-                <li>1. Wall Sit</li>
-                <li>2. Plank</li>
-                <li>3. L-Sit Hold</li>
-                <li>4. Tuck Planche</li>
-                <li>5. Straddle Planche</li>
-                <li>6. Full Planche</li>
-                <li>7. Front Lever</li>
-                <li>8. Back Lever</li>
-                <li>9. Hollow Body Hold</li>
-                <li>10. Human Flag</li>
-            </ul>
-        </div>
+    <div id="statics" class="tab-content">
+        <h2>Statics Progressions</h2>
+        <ul>
+            <li>Plank: 3 sets x 30-60 seconds</li>
+            <li>Wall Sit: 3 sets x 30-60 seconds</li>
+            <li>Handstand Hold (against wall): 3 sets x 30-60 seconds</li>
+            <li>Front Lever Hold Progressions: 3 sets x 5-10 seconds</li>
+        </ul>
+    </div>
 
-        <!-- Gear Section -->
-        <h2>🧰 Essential Gear for Calisthenics Mastery</h2>
-        <div class="gear-item">
-            <h4>1. Pull-Up Bar</h4>
-            <p><strong>Why It’s Useful:</strong> Builds vertical pulling strength and grip.</p>
-            <p><strong>Use For:</strong> Pull-Ups, Chin-Ups, Front/Back Lever Progressions.</p>
-            <p><strong>Pro Tip:</strong> Stable doorway bars or outdoor setups are ideal.</p>
-        </div>
+    <!-- Programs -->
+    <div class="program">
+        <h3>Program 1: Beginner Strength and Mobility</h3>
+        <p>This program is designed for those just starting out with bodyweight training.</p>
+        <ul>
+            <li>Push-Ups: 3 sets x 10-12 reps</li>
+            <li>Bodyweight Squats: 3 sets x 12-15 reps</li>
+            <li>Plank: 3 sets x 30-45 seconds</li>
+            <li>Inverted Rows: 3 sets x 8-10 reps</li>
+            <li>Leg Raises: 3 sets x 10 reps</li>
+        </ul>
+    </div>
 
-        <div class="gear-item">
-            <h4>2. Gymnastic Rings</h4>
-            <p><strong>Why It’s Useful:</strong> Adds instability to increase strength and joint stability.</p>
-            <p><strong>Use For:</strong> Ring Dips, Muscle-Ups, Rows, L-Sits, Levers.</p>
-            <p><strong>Pro Tip:</strong> Makes simple movements 10x harder.</p>
-        </div>
+    <div class="program">
+        <h3>Program 2: Intermediate Strength and Hypertrophy</h3>
+        <p>This program is for those who are ready to progress to more advanced exercises.</p>
+        <ul>
+            <li>Incline Push-Ups: 3 sets x 10-15 reps</li>
+            <li>Bulgarian Split Squats: 3 sets x 12-15 reps</li>
+            <li>Dragon Flags (Progressions): 3 sets x 5-8 reps</li>
+            <li>Ring Rows: 3 sets x 8-12 reps</li>
+            <li>Hollow Body Hold: 3 sets x 20-30 seconds</li>
+        </ul>
+    </div>
 
-        <div class="gear-item">
-            <h4>3. Parallettes</h4>
-            <p><strong>Why It’s Useful:</strong> Better for wrist health and deeper push-ups or L-sits.</p>
-            <p><strong>Use For:</strong> Handstand Push-Ups, Planche Leans, Deep Push-Ups, L-Sits.</p>
-            <p><strong>Pro Tip:</strong> Invaluable for pressing power and balance.</p>
-        </div>
+    <div class="program">
+        <h3>Program 3: Advanced Strength and Power</h3>
+        <p>This program is for those who are looking to really push their limits and increase strength.</p>
+        <ul>
+            <li>Handstand Push-Ups: 3 sets x 5-8 reps</li>
+            <li>Pistol Squats: 3 sets x 5-8 reps per leg</li>
+            <li>Muscle-Ups: 3 sets x 3-5 reps</li>
+            <li>Front Lever Progressions: 3 sets x 5-8 seconds hold</li>
+            <li>Archer Push-Ups: 3 sets x 8-12 reps</li>
+        </ul>
+    </div>
 
-        <div class="gear-item">
-            <h4>4. Resistance Bands</h4>
-            <p><strong>Why It’s Useful:</strong> Perfect for assistance or added difficulty.</p>
-            <p><strong>Use For:</strong> Assisted Pull-Ups, Planche/Lever Work, Mobility, Rehab.</p>
-            <p><strong>Pro Tip:</strong> Use different tensions for scalable progressions.</p>
-        </div>
+    <div class="program">
+        <h3>Program 4: Bodyweight Endurance & Stamina</h3>
+        <p>This program is for those who want to focus on endurance, conditioning, and stamina.</p>
+        <ul>
+            <li>Push-Ups (Max Reps in 1 Minute)</li>
+            <li>Bodyweight Squats (Max Reps in 1 Minute)</li>
+            <li>Burpees: 3 sets x 15-20 reps</li>
+            <li>Mountain Climbers: 3 sets x 30 seconds</li>
+            <li>Plank: 3 sets x 60 seconds</li>
+        </ul>
+    </div>
 
-        <!-- Programs Section -->
-        <h2>💪 Calisthenics Programs for Home Workouts</h2>
-
-        <!-- Program 1 -->
-        <div class="program">
-            <h3>Program 1: Beginner Full Body Routine</h3>
-            <p>This program is great for beginners who want to build strength and muscle.</p>
-            <ul>
-                <li>Push-Ups: 3 sets x 8-12 reps</li>
-                <li>Bodyweight Squats: 3 sets x 15-20 reps</li>
-                <li>Plank: 3 sets x 30 seconds</li>
-                <li>Inverted Rows: 3 sets x 8-12 reps</li>
-                <li>Leg Raises: 3 sets x 10 reps</li>
-            </
-               <li>Leg Raises: 3 sets x 10 reps</li>
-            </ul>
-        </div>
-
-        <!-- Program 2 -->
-        <div class="program">
-            <h3>Program 2: Intermediate Strength and Hypertrophy</h3>
-            <p>This program is for those who are ready to progress to more advanced exercises.</p>
-            <ul>
-                <li>Incline Push-Ups: 3 sets x 10-15 reps</li>
-                <li>Bulgarian Split Squats: 3 sets x 12-15 reps</li>
-                <li>Dragon Flags (Progressions): 3 sets x 5-8 reps</li>
-                <li>Ring Rows: 3 sets x 8-12 reps</li>
-                <li>Hollow Body Hold: 3 sets x 20-30 seconds</li>
-            </ul>
-        </div>
-
-        <!-- Program 3 -->
-        <div class="program">
-            <h3>Program 3: Advanced Strength and Power</h3>
-            <p>This program is for those who are looking to really push their limits and increase strength.</p>
-            <ul>
-                <li>Handstand Push-Ups: 3 sets x 5-8 reps</li>
-                <li>Pistol Squats: 3 sets x 5-8 reps per leg</li>
-                <li>Muscle-Ups: 3 sets x 3-5 reps</li>
-                <li>Front Lever Progressions: 3 sets x 5-8 seconds hold</li>
-                <li>Archer Push-Ups: 3 sets x 8-12 reps</li>
-            </ul>
-        </div>
-
-        <!-- Program 4 -->
-        <div class="program">
-            <h3>Program 4: Bodyweight Endurance & Stamina</h3>
-            <p>This program is for those who want to focus on endurance, conditioning, and stamina.</p>
-            <ul>
-                <li>Push-Ups (Max Reps in 1 Minute)</li>
-                <li>Bodyweight Squats (Max Reps in 1 Minute)</li>
-                <li>Burpees: 3 sets x 15-20 reps</li>
-                <li>Mountain Climbers: 3 sets x 30 seconds</li>
-                <li>Plank: 3 sets x 60 seconds</li>
-            </ul>
-        </div>
-
-        <!-- Program 5 -->
-        <div class="program">
-            <h3>Program 5: Full Body Strength & Mobility</h3>
-            <p>This program integrates strength training with mobility work, ensuring balanced development.</p>
-            <ul>
-                <li>Push-Ups: 3 sets x 8-12 reps</li>
-                <li>Squat to Lunge Transitions: 3 sets x 12 reps</li>
-                <li>Plank to Push-Up: 3 sets x 10-12 reps</li>
-                <li>Hip Flexor Stretch: 3 sets x 30 seconds per side</li>
-                <li>Shoulder Mobility Drills: 3 sets x 10 reps</li>
-            </ul>
-        </div>
-
+    <div class="program">
+        <h3>Program 5: Full Body Strength & Mobility</h3>
+        <p>This program integrates strength training with mobility work, ensuring balanced development.</p>
+        <ul>
+            <li>Push-Ups: 3 sets x 8-12 reps</li>
+            <li>Squat to Lunge Transitions: 3 sets x 12 reps</li>
+            <li>Plank to Push-Up: 3 sets x 10-12 reps</li>
+            <li>Hip Flexor Stretch: 3 sets x 30 seconds per side</li>
+            <li>Shoulder Mobility Drills: 3 sets x 10 reps</li>
+        </ul>
     </div>
 
     <script>

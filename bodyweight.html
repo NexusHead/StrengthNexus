@@ -1,164 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bodyweight Mastery | StrengthMind</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
-      margin: 0;
-      padding: 0 1rem;
-    }
-    h1, h2, h3 {
-      color: #111;
-    }
-    .section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 0.6rem;
-    }
-    strong {
-      color: #000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodyweight Mastery & Calisthenics Programs</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        h3 {
+            color: #2980b9;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Tab styles */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+            background-color: #2980b9;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            color: white;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .tab:hover {
+            background-color: #3498db;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .active-tab {
+            display: block;
+        }
+
+        .tab-content ul {
+            padding-left: 20px;
+        }
+
+        /* Gear styles */
+        .gear-item {
+            background: #ecf0f1;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .gear-item h4 {
+            margin-top: 0;
+        }
+
+        .program {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
 </head>
 <body>
-  <div class="section">
-    <h1>Bodyweight Mastery Program</h1>
-    <p><strong>Purpose:</strong> Master full-body strength using only your bodyweight. This is a long-term, structured progression system rooted in calisthenics and gymnastic principles. Ideal for athletes seeking functional strength, control, and mobility.</p>
-  </div>
+    <div class="container">
+        <h1>Bodyweight Mastery & Calisthenics Programs</h1>
+        <p>Master bodyweight training with a minimalistic approach. No equipment, no excuses. Just results.</p>
 
-  <div class="section">
-    <h2>Vertical Pull Progression</h2>
-    <ol>
-      <li>Dead hang</li>
-      <li>Scapular pulls</li>
-      <li>Assisted pull-ups</li>
-      <li>Negative pull-ups</li>
-      <li>Chin-ups</li>
-      <li>Neutral-grip pull-ups</li>
-      <li>Standard pull-ups</li>
-      <li>Archer pull-ups</li>
-      <li>Typewriter pull-ups</li>
-      <li>Chest-to-bar pull-ups</li>
-      <li>Clapping pull-ups</li>
-      <li>One-arm assisted pull-ups</li>
-      <li>One-arm pull-up (partial ROM)</li>
-      <li>Full one-arm pull-up</li>
-    </ol>
-    <p><strong>Form Tip:</strong> Engage your scapula first (scapular retraction) before pulling. Avoid swinging and use full range of motion.</p>
-  </div>
+        <!-- Tabs Section -->
+        <div class="tabs">
+            <div class="tab" onclick="showTab('vertical-pull')">Vertical Pull</div>
+            <div class="tab" onclick="showTab('horizontal-pull')">Horizontal Pull</div>
+            <div class="tab" onclick="showTab('vertical-push')">Vertical Push</div>
+            <div class="tab" onclick="showTab('horizontal-push')">Horizontal Push</div>
+            <div class="tab" onclick="showTab('core')">Core</div>
+            <div class="tab" onclick="showTab('statics')">Statics</div>
+        </div>
 
-  <div class="section">
-    <h2>Horizontal Pull Progression</h2>
-    <ol>
-      <li>Wall rows</li>
-      <li>Low incline body rows</li>
-      <li>Mid incline rows</li>
-      <li>Inverted rows</li>
-      <li>Feet-elevated rows</li>
-      <li>Wide-grip rows</li>
-      <li>Archer rows</li>
-      <li>One-arm rows (assisted)</li>
-      <li>One-arm inverted rows</li>
-      <li>Pelican rows</li>
-      <li>Ice-cream makers</li>
-    </ol>
-    <p><strong>Form Tip:</strong> Keep your body straight and squeeze your shoulder blades at the top of each rep.</p>
-  </div>
+        <!-- Tab Content -->
+        <div id="vertical-pull" class="tab-content">
+            <h2>Vertical Pull Exercise Progressions</h2>
+            <ul>
+                <li>1. Assisted Pull-Up</li>
+                <li>2. Negative Pull-Up</li>
+                <li>3. Jumping Pull-Up</li>
+                <li>4. Band Assisted Pull-Up</li>
+                <li>5. Pull-Up (Standard)</li>
+                <li>6. Weighted Pull-Up</li>
+                <li>7. Archer Pull-Up</li>
+                <li>8. Muscle-Up Progression</li>
+                <li>9. Front Lever Progression</li>
+                <li>10. Full Front Lever</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>Vertical Push Progression</h2>
-    <ol>
-      <li>Wall handstand hold</li>
-      <li>Wall-supported handstand push-up negatives</li>
-      <li>Pike push-ups</li>
-      <li>Elevated pike push-ups</li>
-      <li>Wall handstand push-ups</li>
-      <li>Freestanding handstand hold</li>
-      <li>Freestanding handstand push-up negatives</li>
-      <li>Partial ROM freestanding handstand push-ups</li>
-      <li>Full ROM freestanding handstand push-ups</li>
-      <li>90-degree push-ups</li>
-    </ol>
-    <p><strong>Form Tip:</strong> Keep your core tight and avoid flaring elbows. Lower yourself slowly with control.</p>
-  </div>
+        <div id="horizontal-pull" class="tab-content">
+            <h2>Horizontal Pull Exercise Progressions</h2>
+            <ul>
+                <li>1. Inverted Row (Feet on Ground)</li>
+                <li>2. Inverted Row (Feet Elevated)</li>
+                <li>3. Ring Rows</li>
+                <li>4. Single-Arm Inverted Row</li>
+                <li>5. T-Bar Row (Bodyweight)</li>
+                <li>6. Bent-Over Rows (Bodyweight)</li>
+                <li>7. Renegade Rows</li>
+                <li>8. Pull-Ups (Wide Grip)</li>
+                <li>9. Muscle-Up Progression</li>
+                <li>10. One-Arm Row Progression</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>Horizontal Push Progression</h2>
-    <ol>
-      <li>Wall push-ups</li>
-      <li>Incline push-ups</li>
-      <li>Knee push-ups</li>
-      <li>Standard push-ups</li>
-      <li>Diamond push-ups</li>
-      <li>Archer push-ups</li>
-      <li>Feet-elevated push-ups</li>
-      <li>Wide-grip push-ups</li>
-      <li>Explosive push-ups</li>
-      <li>Clapping push-ups</li>
-      <li>Pseudo planche push-ups</li>
-      <li>90-degree push-ups</li>
-      <li>Full planche push-ups</li>
-    </ol>
-    <p><strong>Form Tip:</strong> Hands under shoulders, elbows at 45°, body in straight line. Don’t rush progression.</p>
-  </div>
+        <div id="vertical-push" class="tab-content">
+            <h2>Vertical Push Exercise Progressions</h2>
+            <ul>
+                <li>1. Wall Push-Up</li>
+                <li>2. Incline Push-Up</li>
+                <li>3. Standard Push-Up</li>
+                <li>4. Decline Push-Up</li>
+                <li>5. Handstand Push-Up (Wall Supported)</li>
+                <li>6. Handstand Push-Up (Freestanding)</li>
+                <li>7. Pike Push-Up</li>
+                <li>8. Planche Lean</li>
+                <li>9. Full Planche</li>
+                <li>10. Planche Push-Up</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>Core Progression</h2>
-    <ol>
-      <li>Plank</li>
-      <li>Hollow hold</li>
-      <li>Leg raises</li>
-      <li>Hanging knee raises</li>
-      <li>Hanging leg raises</li>
-      <li>Toes to bar</li>
-      <li>V-ups</li>
-      <li>Dragon flags</li>
-      <li>Windshield wipers</li>
-      <li>L-sit hold (on floor)</li>
-      <li>L-sit on parallettes or dip bars</li>
-      <li>L-sit to tuck planche</li>
-    </ol>
-    <p><strong>Form Tip:</strong> Don’t swing. Control every movement. Breathe through the tension.</p>
-  </div>
+        <div id="horizontal-push" class="tab-content">
+            <h2>Horizontal Push Exercise Progressions</h2>
+            <ul>
+                <li>1. Wall Push-Up</li>
+                <li>2. Standard Push-Up</li>
+                <li>3. Diamond Push-Up</li>
+                <li>4. Wide Push-Up</li>
+                <li>5. Incline Push-Up</li>
+                <li>6. Decline Push-Up</li>
+                <li>7. Archer Push-Up</li>
+                <li>8. Spiderman Push-Up</li>
+                <li>9. One-Handed Push-Up</li>
+                <li>10. Clap Push-Up</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>Statics Progression</h2>
-    <ol>
-      <li>Wall headstand</li>
-      <li>Frog stand</li>
-      <li>Advanced frog stand</li>
-      <li>Tuck planche</li>
-      <li>Advanced tuck planche</li>
-      <li>Straddle planche</li>
-      <li>Full planche</li>
-      <li>Tuck front lever</li>
-      <li>Advanced tuck front lever</li>
-      <li>Straddle front lever</li>
-      <li>Full front lever</li>
-      <li>Back lever</li>
-      <li>Human flag (progressions)</li>
-    </ol>
-    <p><strong>Form Tip:</strong> Don’t rush statics. Hold each position with full body tension and perfect form.</p>
-  </div>
+        <div id="core" class="tab-content">
+            <h2>Core Exercise Progressions</h2>
+            <ul>
+                <li>1. Plank</li>
+                <li>2. Side Plank</li>
+                <li>3. Hollow Body Hold</li>
+                <li>4. Leg Raises</li>
+                <li>5. Russian Twists</li>
+                <li>6. L-Sit</li>
+                <li>7. V-Ups</li>
+                <li>8. Dragon Flags</li>
+                <li>9. Hanging Leg Raises</li>
+                <li>10. Ab Wheel Rollouts</li>
+            </ul>
+        </div>
 
-  <div class="section">
-    <h2>Final Words</h2>
-    <p>This program builds elite strength and control over years. Document your progress, master the basics, and never sacrifice form for speed.</p>
-  </div>
-</body>
-</html>
+        <div id="statics" class="tab-content">
+            <h2>Statics Exercise Progressions</h2>
+            <ul>
+                <li>1. Wall Sit</li>
+                <li>2. Plank</li>
+                <li>3. L-Sit Hold</li>
+                <li>4. Tuck Planche</li>
+                <li>5. Straddle Planche</li>
+                <li>6. Full Planche</li>
+                <li>7. Front Lever</li>
+                <li>8. Back Lever</li>
+                <li>9. Hollow Body Hold</li>
+                <li>10. Human Flag</li>
+            </ul>
+        </div>
+
+        <!-- Gear Section -->
+        <h2>🧰 Essential Gear for Calisthenics Mastery</h2>
+        <div class="gear-item">
+            <h4>1. Pull-Up Bar</h4>
+            <p><strong>Why It’s Useful:</strong> Builds vertical pulling strength and grip.</p>
+            <p><strong>Use For:</strong> Pull-Ups, Chin-Ups, Front/Back Lever Progressions.</p>
+            <p><strong>Pro Tip:</strong> Stable doorway bars or outdoor setups are ideal.</p>
+        </div>
+
+        <div class="gear-item">
+            <h4>2. Gymnastic Rings</h4>
+            <p><strong>Why It’s Useful:</strong> Adds instability to increase strength and joint stability.</p>
+            <p><strong>Use For:</strong> Ring Dips, Muscle-Ups, Rows, L-Sits, Levers.</p>
+            <p><strong>Pro Tip:</strong> Makes simple movements 10x harder.</p>
+        </div>
+
+        <div class="gear-item">
+            <h4>3. Parallettes</h4>
+            <p><strong>Why It’s Useful:</strong> Better for wrist health and deeper push-ups or L-sits.</p>
+            <p><strong>Use For:</strong> Handstand Push-Ups, Planche Leans, Deep Push-Ups, L-Sits.</p>
+            <p><strong>Pro Tip:</strong> Invaluable for pressing power and balance.</p>
+        </div>
+
+        <div class="gear-item">
+            <h4>4. Resistance Bands</h4>
+            <p><strong>Why It’s Useful:</strong> Perfect for assistance or added difficulty.</p>
+            <p><strong>Use For:</strong> Assisted Pull-Ups, Planche/Lever Work, Mobility, Rehab.</p>
+            <p><strong>Pro Tip:</strong> Use different tensions for scalable progressions.</p>
+        </div>
+
+        <!-- Programs Section -->
+        <h2>💪 Calisthenics Programs for Home Workouts</h2>
+
+        <!-- Program 1 -->
+        <div class="program">
+            <h3>Program 1: Beginner Full Body Routine</h3>
+            <p>This program is great for beginners who want to build strength and muscle.</p>
+            <ul>
+                <li>Push-Ups: 3 sets x 8-12 reps</li>
+                <li>Bodyweight Squats: 3 sets x 15-20 reps</li>
+                <li>Plank: 3 sets x 30 seconds</li>
+                <li>Inverted Rows: 3 sets x 8-12 reps</li>
+                <li>Leg Raises: 3 sets x 10 reps</li>
+            </
